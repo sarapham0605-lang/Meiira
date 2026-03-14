@@ -8,24 +8,25 @@
 
 <title>Milya Meiira Commission</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-background:#f6eeee;
 font-family:'Be Vietnam Pro',sans-serif;
+background:#f6eeee;
 color:#5b4545;
-overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
 
-position:sticky;
+position:fixed;
 top:0;
+left:0;
+right:0;
 
 display:flex;
 justify-content:space-between;
@@ -33,12 +34,41 @@ align-items:center;
 
 padding:18px 8%;
 
-background:#ffffffd9;
-backdrop-filter:blur(6px);
+background:white;
 
 z-index:1000;
 
+transition:0.3s;
+
 }
+
+nav.scrolled{
+
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(8px);
+
+}
+
+/* logo */
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+font-weight:700;
+font-size:20px;
+
+}
+
+.logo img{
+
+width:32px;
+
+}
+
+/* menu */
 
 .menu{
 
@@ -51,18 +81,24 @@ gap:25px;
 .menu a{
 
 text-decoration:none;
-
 color:#6d5454;
 
 font-weight:600;
 
-padding-bottom:6px;
-
 position:relative;
+
+padding-bottom:6px;
 
 }
 
-/* underline animation */
+.menu a img{
+
+width:14px;
+margin-right:5px;
+
+}
+
+/* underline */
 
 .menu a::after{
 
@@ -70,41 +106,22 @@ content:"";
 
 position:absolute;
 
+bottom:0;
 left:0;
 
-bottom:0;
-
 width:0%;
+height:2px;
 
-height:3px;
+background:#e07a8e;
 
-background:#e88fa2;
-
-transition:.3s;
-
-}
-
-.menu a:hover::after{
-
-width:100%;
+transition:0.25s;
 
 }
 
+.menu a:hover::after,
 .menu a.active::after{
 
 width:100%;
-
-}
-
-/* peach icon */
-
-.menu img{
-
-width:16px;
-
-margin-right:6px;
-
-vertical-align:middle;
 
 }
 
@@ -114,7 +131,7 @@ vertical-align:middle;
 
 background:#e88fa2;
 
-color:white !important;
+color:white;
 
 padding:10px 22px;
 
@@ -122,20 +139,26 @@ border-radius:25px;
 
 }
 
+.contact-btn::after{
+
+display:none;
+
+}
+
 /* HERO */
 
 .hero{
 
-text-align:center;
+padding-top:120px;
 
-padding:70px 20px;
+text-align:center;
 
 }
 
-.avatar{
+.hero img{
 
-width:180px;
-height:180px;
+width:170px;
+height:170px;
 
 border-radius:50%;
 
@@ -147,7 +170,7 @@ object-fit:cover;
 
 .hero h1{
 
-font-size:48px;
+font-size:46px;
 
 margin:15px 0 5px;
 
@@ -163,23 +186,13 @@ color:#9c7575;
 
 .big-title{
 
-text-align:center;
-
 font-family:'Playfair Display',serif;
 
 font-size:42px;
 
-margin-bottom:8px;
-
-}
-
-.sub-title{
-
 text-align:center;
 
-color:#a67b7b;
-
-margin-bottom:35px;
+margin-top:80px;
 
 }
 
@@ -189,7 +202,7 @@ margin-bottom:35px;
 
 background:#f3e2e2;
 
-border-radius:22px;
+border-radius:20px;
 
 padding:40px;
 
@@ -199,17 +212,17 @@ max-width:950px;
 
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 
-transition:.3s;
+transition:0.3s;
 
 }
 
 .section:hover{
 
-transform:translateY(-6px);
+transform:translateY(-5px);
 
 }
 
-/* GALLERY BUTTON */
+/* FILTER */
 
 .filter{
 
@@ -217,9 +230,9 @@ display:flex;
 
 justify-content:center;
 
-gap:15px;
+gap:14px;
 
-margin-bottom:30px;
+margin-bottom:25px;
 
 }
 
@@ -237,8 +250,6 @@ font-weight:600;
 
 cursor:pointer;
 
-color:#7a5b5b;
-
 }
 
 .filter button.active{
@@ -249,7 +260,7 @@ color:white;
 
 }
 
-/* GALLERY GRID */
+/* gallery grid */
 
 .gallery{
 
@@ -269,12 +280,11 @@ border-radius:12px;
 
 }
 
-/* TABLE */
+/* tables */
 
 table{
 
 width:100%;
-
 border-collapse:collapse;
 
 }
@@ -282,7 +292,6 @@ border-collapse:collapse;
 th{
 
 background:#e88fa2;
-
 color:white;
 
 padding:14px;
@@ -303,7 +312,7 @@ background:#f9eeee;
 
 }
 
-/* PRICE TITLE */
+/* price title */
 
 .price-title{
 
@@ -311,13 +320,13 @@ font-size:24px;
 
 color:#d85d7b;
 
-margin-bottom:10px;
+margin-bottom:12px;
 
 font-weight:700;
 
 }
 
-/* TOS */
+/* tos */
 
 .tos-title{
 
@@ -327,7 +336,7 @@ color:#d85d7b;
 
 font-weight:700;
 
-margin-bottom:15px;
+margin-bottom:12px;
 
 }
 
@@ -349,7 +358,7 @@ color:#a93c56;
 
 }
 
-/* CONTACT */
+/* contact */
 
 .contact{
 
@@ -359,7 +368,7 @@ text-align:center;
 
 .contact a{
 
-background:#d85d7b;
+background:#e88fa2;
 
 color:white;
 
@@ -369,19 +378,15 @@ border-radius:30px;
 
 text-decoration:none;
 
-display:inline-block;
-
-margin-top:15px;
-
 }
 
-/* FOOTER */
+/* footer */
 
 footer{
 
 text-align:center;
 
-padding:30px;
+margin:60px 0 30px;
 
 font-size:13px;
 
@@ -389,7 +394,7 @@ color:#8b6e6e;
 
 }
 
-/* PETALS */
+/* sakura */
 
 .sakura{
 
@@ -419,20 +424,23 @@ pointer-events:none;
 
 <body>
 
-<nav>
+<nav id="navbar">
+
+<div class="logo">
+<img src="peach.png">
+Milya Meiira
+</div>
 
 <div class="menu">
 
 <a href="#home">Trang chủ</a>
 
 <a href="#gallery">
-<img src="peach.png">
-Gallery
+<img src="peach.png">Gallery
 </a>
 
 <a href="#price">
-<img src="peach.png">
-Giá & Điều khoản
+<img src="peach.png">Giá & Điều khoản
 </a>
 
 <a href="#about">About Me</a>
@@ -445,7 +453,7 @@ Giá & Điều khoản
 
 <section id="home" class="hero">
 
-<img src="avatar.jpg" class="avatar">
+<img src="avatar.jpg">
 
 <h1>Milya Meiira</h1>
 
@@ -453,18 +461,13 @@ Giá & Điều khoản
 
 </section>
 
-<!-- GALLERY -->
-
 <h2 class="big-title">🌸 Gallery</h2>
-
-<div class="sub-title">Tuyển tập các tác phẩm đã thực hiện</div>
 
 <section id="gallery" class="section">
 
 <div class="filter">
 
 <button class="active" onclick="showGallery('normal',this)">Normal</button>
-
 <button onclick="showGallery('chibi',this)">Chibi</button>
 
 </div>
@@ -472,8 +475,6 @@ Giá & Điều khoản
 <div class="gallery" id="gallery-container"></div>
 
 </section>
-
-<!-- PRICE -->
 
 <h2 class="big-title">Bảng Giá</h2>
 
@@ -559,15 +560,41 @@ Giá & Điều khoản
 
 </section>
 
-<!-- CONTACT -->
+<section id="tos">
+
+<div class="section">
+
+<div class="tos-title">1. Về khách hàng</div>
+
+<p>Gửi đầy đủ brief và note yêu cầu.</p>
+
+<p>Có thể trì hoãn tiền comm 2 tuần.</p>
+
+<div class="ai-warning">
+TUYỆT ĐỐI KHÔNG FEED CHO A.I
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="tos-title">2. Về artist</div>
+
+<p>Được phép dùng tranh làm sample trừ khi khách trả phí private.</p>
+
+<p>Có quyền từ chối nếu đơn quá khả năng.</p>
+
+<p>Nếu quá deadline mà chưa có sketch → refund 100% tiền cọc.</p>
+
+</div>
+
+</section>
 
 <section id="contact" class="section contact">
 
 <div class="price-title">Liên hệ Commission</div>
 
-<a href="https://www.facebook.com/kemdao.peach/" target="_blank">
-Liên hệ qua Facebook
-</a>
+<a href="https://www.facebook.com/kemdao.peach/">Liên hệ qua Facebook</a>
 
 </section>
 
@@ -579,7 +606,7 @@ Do not repost or use my art without permission.
 
 <script>
 
-/* gallery data */
+/* gallery */
 
 const normal=[
 "sample1.jpg","sample2.jpg","sample3.jpg",
@@ -594,7 +621,8 @@ const chibi=[
 
 function showGallery(type,btn){
 
-document.querySelectorAll(".filter button").forEach(b=>b.classList.remove("active"))
+document.querySelectorAll(".filter button")
+.forEach(b=>b.classList.remove("active"))
 
 btn.classList.add("active")
 
@@ -614,7 +642,7 @@ document.getElementById("gallery-container").innerHTML=html
 
 showGallery("normal",document.querySelector(".filter button"))
 
-/* petals */
+/* sakura */
 
 for(let i=0;i<35;i++){
 
@@ -632,7 +660,26 @@ document.body.appendChild(p)
 
 }
 
+/* navbar opacity */
+
+window.addEventListener("scroll",function(){
+
+let nav=document.getElementById("navbar")
+
+if(window.scrollY>50){
+
+nav.classList.add("scrolled")
+
+}else{
+
+nav.classList.remove("scrolled")
+
+}
+
+})
+
 </script>
 
 </body>
 </html>
+
