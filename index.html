@@ -16,6 +16,7 @@ margin:0;
 font-family:'Be Vietnam Pro',sans-serif;
 background:#f6eeee;
 color:#5b4545;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
@@ -31,8 +32,8 @@ justify-content:space-between;
 align-items:center;
 
 padding:18px 8%;
-
 background:white;
+
 z-index:999;
 transition:.3s;
 }
@@ -72,16 +73,19 @@ position:relative;
 padding-bottom:6px;
 }
 
-/* underline */
+/* underline hover */
 
 .menu a::after{
 content:"";
 position:absolute;
 bottom:0;
 left:0;
+
 width:0%;
 height:2px;
+
 background:#e07a8e;
+
 transition:.25s;
 }
 
@@ -92,12 +96,19 @@ width:100%;
 /* CONTACT BUTTON */
 
 .contact-btn{
+
 background:#e88fa2;
-color:#ffffff;   /* chữ trắng */
-padding:10px 22px;
-border-radius:25px;
+color:white !important;
+
+padding:10px 24px;
+
+border-radius:30px;
+
 position:relative;
-top:-4px;
+top:-3px;
+
+font-weight:600;
+
 }
 
 .contact-btn::after{
@@ -135,8 +146,10 @@ display:flex;
 align-items:center;
 justify-content:center;
 gap:10px;
+
 font-family:'Playfair Display',serif;
 font-size:40px;
+
 margin-top:80px;
 }
 
@@ -144,15 +157,20 @@ margin-top:80px;
 height:38px;
 }
 
-/* SECTION CARD */
+/* SECTION */
 
 .section{
 background:#f3e2e2;
+
 border-radius:20px;
+
 padding:40px;
+
 margin:40px auto;
 max-width:950px;
+
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
 transition:.3s;
 }
 
@@ -170,12 +188,19 @@ margin-bottom:25px;
 }
 
 .filter button{
+
 padding:12px 28px;
+
 border-radius:30px;
+
 border:2px solid #e88fa2;
+
 background:none;
+
 font-weight:600;
+
 cursor:pointer;
+
 }
 
 .filter button.active{
@@ -187,7 +212,9 @@ color:white;
 
 .gallery{
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
 gap:18px;
 }
 
@@ -236,10 +263,15 @@ margin-bottom:12px;
 
 .ai-warning{
 margin-top:15px;
+
 padding:14px;
+
 background:#f7c5ce;
+
 border-left:6px solid #d85d7b;
+
 border-radius:10px;
+
 font-weight:700;
 color:#a93c56;
 }
@@ -251,12 +283,19 @@ text-align:center;
 }
 
 .contact a{
+
 background:#e88fa2;
+
 color:white;
+
 padding:14px 35px;
+
 border-radius:30px;
+
 text-decoration:none;
+
 font-weight:600;
+
 }
 
 /* FOOTER */
@@ -266,6 +305,36 @@ text-align:center;
 margin:70px 0 30px;
 font-size:13px;
 color:#8b6e6e;
+}
+
+/* SAKURA */
+
+.sakura{
+
+position:fixed;
+
+top:-10px;
+
+font-size:18px;
+
+animation:fall linear infinite;
+
+pointer-events:none;
+
+z-index:1;
+
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(110vh);
+}
+
 }
 
 </style>
@@ -304,8 +373,6 @@ Milya Meiira
 
 </section>
 
-<!-- GALLERY -->
-
 <h2 class="section-title">
 <img src="peach.png">
 Gallery
@@ -323,8 +390,6 @@ Gallery
 <div class="gallery" id="gallery-container"></div>
 
 </section>
-
-<!-- PRICE -->
 
 <h2 class="section-title">
 <img src="peach.png">
@@ -369,8 +434,6 @@ Bảng giá
 
 </table>
 
-<p>(Hiện tại mình không nhận full body)</p>
-
 </div>
 
 <div class="section">
@@ -412,8 +475,6 @@ Bảng giá
 </div>
 
 </section>
-
-<!-- TOS -->
 
 <h2 class="section-title">
 <img src="peach.png">
@@ -463,6 +524,8 @@ Do not repost or use my art without permission.
 
 <script>
 
+/* GALLERY */
+
 const normal=[
 "sample1.jpg","sample2.jpg","sample3.jpg",
 "sample4.jpg","sample5.jpg","sample6.jpg",
@@ -495,9 +558,11 @@ document.getElementById("gallery-container").innerHTML=html
 
 showGallery("normal",document.querySelector(".filter button"))
 
+/* NAVBAR OPACITY */
+
 window.addEventListener("scroll",function(){
 
-let nav=document.getElementById("navbar")
+let nav=document.querySelector("nav")
 
 if(window.scrollY>50){
 nav.classList.add("scrolled")
@@ -506,6 +571,24 @@ nav.classList.remove("scrolled")
 }
 
 })
+
+/* SAKURA */
+
+for(let i=0;i<35;i++){
+
+let sakura=document.createElement("div")
+
+sakura.className="sakura"
+
+sakura.innerHTML="🌸"
+
+sakura.style.left=Math.random()*100+"vw"
+
+sakura.style.animationDuration=(5+Math.random()*7)+"s"
+
+document.body.appendChild(sakura)
+
+}
 
 </script>
 
