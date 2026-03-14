@@ -8,7 +8,7 @@
 
 <title>Milya Meiira Commission</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,9 +16,9 @@ html{scroll-behavior:smooth;}
 
 body{
 margin:0;
+background:#f6eeee;
 font-family:'Be Vietnam Pro',sans-serif;
-background:#f5eaea;
-color:#5c4040;
+color:#5b4545;
 overflow-x:hidden;
 }
 
@@ -28,76 +28,84 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
+padding:22px 8%;
 }
 
 .logo{
 display:flex;
 align-items:center;
 gap:12px;
-font-size:22px;
 font-weight:700;
+font-size:22px;
 }
 
 .logo img{width:38px;}
 
 .menu a{
-margin:0 15px;
+margin:0 14px;
 text-decoration:none;
-color:#7a5a5a;
 font-weight:600;
+color:#6d5454;
 }
 
-.menu a:hover{color:#d65a79;}
+.menu a:hover{color:#d85d7b;}
 
 /* HERO */
 
-.hero{text-align:center;padding:70px 20px;}
+.hero{
+text-align:center;
+padding:70px 20px;
+}
 
 .avatar{
 width:180px;
 height:180px;
 border-radius:50%;
-border:6px solid #e89aaa;
+border:6px solid #e8a3b0;
 object-fit:cover;
 }
 
 .hero h1{
-font-size:46px;
-margin:15px 0 5px;
+font-size:48px;
+margin:18px 0 5px;
 }
 
 .subtitle{
-color:#a67b7b;
+color:#9c7575;
 font-size:18px;
+}
+
+/* SECTION TITLE */
+
+.big-title{
+text-align:center;
+font-family:'Playfair Display',serif;
+font-size:44px;
+margin-bottom:10px;
+}
+
+.sub-title{
+text-align:center;
+color:#a67b7b;
+margin-bottom:40px;
 }
 
 /* CARD */
 
 .section{
-background:#f2dede;
-border-radius:18px;
+background:#f3e2e2;
+border-radius:20px;
 padding:40px;
 margin:60px auto;
-max-width:900px;
+max-width:950px;
+box-shadow:0 10px 25px rgba(0,0,0,0.07);
 transition:0.35s;
-box-shadow:0 10px 25px rgba(0,0,0,0.06);
 }
 
 .section:hover{
 transform:translateY(-8px);
 box-shadow:0 25px 45px rgba(0,0,0,0.12);
 }
-
-.section-title{
-display:flex;
-align-items:center;
-gap:12px;
-margin-bottom:25px;
-font-size:30px;
-}
-
-.section-title img{width:34px;}
 
 /* GALLERY */
 
@@ -113,25 +121,32 @@ border-radius:14px;
 transition:0.3s;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
-}
+.gallery img:hover{transform:scale(1.05);}
 
-/* TABLE */
+/* PRICE TABLE */
+
+.price-title{
+font-size:26px;
+color:#d85d7b;
+font-weight:700;
+margin-bottom:15px;
+}
 
 table{
 width:100%;
 border-collapse:collapse;
+margin-top:10px;
 }
 
 th{
-background:#d65a79;
+background:#e88fa2;
 color:white;
 padding:14px;
 }
 
 td{
 padding:14px;
+text-align:center;
 }
 
 tr:nth-child(even){
@@ -143,43 +158,20 @@ background:#f9eeee;
 .tos-title{
 font-size:22px;
 font-weight:700;
-color:#d65a79;
+color:#d85d7b;
 margin-bottom:18px;
-display:flex;
-align-items:center;
-gap:10px;
 }
 
-.tos-title img{
-width:22px;
-}
-
-.tos-list{
-line-height:1.9;
-}
-
-.tos-list p{
-margin:8px 0;
-}
-
-/* AI WARNING - sửa màu */
+.tos-list{line-height:1.9;}
 
 .ai-warning{
-
 margin-top:15px;
 padding:14px 20px;
-
 background:#f7c5ce;
-border-left:6px solid #d65a79;
-
+border-left:6px solid #d85d7b;
 border-radius:10px;
-
 color:#a93c56;
-
 font-weight:700;
-
-letter-spacing:0.5px;
-
 }
 
 /* CONTACT */
@@ -189,53 +181,33 @@ text-align:center;
 }
 
 .contact a{
-
 display:inline-block;
 margin-top:15px;
-
-background:#d65a79;
-
+background:#d85d7b;
 color:white;
-
 padding:15px 35px;
-
 border-radius:30px;
-
 text-decoration:none;
-
 font-size:18px;
-
 box-shadow:0 8px 20px rgba(214,90,121,0.4);
-
 transition:0.3s;
-
 }
 
-.contact a:hover{
-transform:scale(1.05);
-}
+.contact a:hover{transform:scale(1.05);}
 
 /* PETALS */
 
 .sakura{
-
 position:fixed;
 top:-10px;
-
 font-size:18px;
-
 animation:fall linear infinite;
-
 pointer-events:none;
-
 }
 
 @keyframes fall{
-
 0%{transform:translateY(-10px)}
-
 100%{transform:translateY(110vh)}
-
 }
 
 </style>
@@ -265,46 +237,39 @@ Milya Meiira
 <img src="avatar.jpg" class="avatar">
 
 <h1>Milya Meiira</h1>
-
-<div class="subtitle">
-Digital Artist
-</div>
+<div class="subtitle">Digital Artist</div>
 
 </section>
 
 <!-- GALLERY -->
 
+<h2 class="big-title">Gallery</h2>
+
 <section id="gallery" class="section">
 
-<div class="section-title">
-<img src="peach.png">
-Gallery
-</div>
-
 <div class="gallery">
-
 <img src="sample1.jpg">
 <img src="sample2.jpg">
 <img src="sample3.jpg">
 <img src="sample4.jpg">
-
 </div>
 
 </section>
 
 <!-- PRICE -->
 
+<h2 class="big-title">Bảng Giá & Điều Khoản</h2>
+<div class="sub-title">Commission pricing & terms of service</div>
+
 <section id="price" class="section">
 
-<div class="section-title">
-<img src="peach.png">
-Bảng Giá
-</div>
+<div class="price-title">1. Normal</div>
 
 <table>
 
 <tr>
 <th>Loại</th>
+<th>Sketch</th>
 <th>Sketch Color</th>
 <th>Full</th>
 </tr>
@@ -312,71 +277,71 @@ Bảng Giá
 <tr>
 <td>Headshot</td>
 <td>50.000₫</td>
+<td>80.000₫</td>
 <td>100.000₫</td>
 </tr>
 
 <tr>
 <td>Chest-up</td>
 <td>80.000₫</td>
+<td>100.000₫</td>
 <td>135.000₫</td>
 </tr>
 
 <tr>
 <td>Half-body</td>
-<td>130.000₫</td>
+<td>110.000₫</td>
+<td>150.000₫</td>
 <td>200.000₫</td>
 </tr>
 
 </table>
 
-<p>(Hiện tại không nhận full body)</p>
+<p>(Hiện tại mình không nhận full body)</p>
+
+<br>
+
+<div class="price-title">2. Chibi</div>
+
+<table>
+
+<tr>
+<th>Loại</th>
+<th>Sketch</th>
+<th>Sketch Color</th>
+<th>Full</th>
+</tr>
+
+<tr>
+<td>Headshot</td>
+<td>30.000₫</td>
+<td>50.000₫</td>
+<td>80.000₫</td>
+</tr>
+
+<tr>
+<td>Half-body</td>
+<td>40.000₫</td>
+<td>60.000₫</td>
+<td>90.000₫</td>
+</tr>
+
+<tr>
+<td>Full-body</td>
+<td>50.000₫</td>
+<td>80.000₫</td>
+<td>110.000₫</td>
+</tr>
+
+</table>
 
 </section>
 
-<!-- I -->
+<!-- TOS -->
 
 <section id="tos" class="section">
 
-<div class="section-title">
-<img src="peach.png">
-Điều Khoản Dịch Vụ
-</div>
-
-<div class="tos-title">
-<img src="peach.png">
-1. Về Commission
-</div>
-
-<div class="tos-list">
-
-<p>Cọc <b>30%</b> sau khi chốt slot - wip, <b>THANH TOÁN full</b> sau khi nhận sketch.</p>
-
-<p>Thêm character: <b>+100%</b> giá gốc.</p>
-
-<p>Thanh toán: <b>Bank / Momo</b>.</p>
-
-<p>Deadline: <b>1 - 3 tuần</b>.</p>
-
-<p>Nhận rush <b>50k – 300k</b>.</p>
-
-<p>Sửa <b>miễn phí</b> trước khi chốt sketch.</p>
-
-<p><b>Không nhận:</b> background khó, furry, mecha, người thật.</p>
-
-<p>Phí thương mại: <b>x3</b> | Private: <b>x1.5</b></p>
-
-</div>
-
-</section>
-
-<!-- II -->
-
-<section class="section">
-
-<div class="tos-title">
-<img src="peach.png">
-2. Về khách hàng
-</div>
+<div class="tos-title">2. Về khách hàng</div>
 
 <div class="tos-list">
 
@@ -384,43 +349,29 @@ Bảng Giá
 
 <p>Có thể trì hoãn tiền comm <b>2 tuần</b>, nếu quá 2 tuần mình sẽ cân nhắc giao dịch.</p>
 
-<div class="ai-warning">
-TUYỆT ĐỐI KHÔNG FEED CHO A.I
-</div>
+<div class="ai-warning">TUYỆT ĐỐI KHÔNG FEED CHO A.I</div>
 
 </div>
 
-</section>
+<br>
 
-<!-- III -->
-
-<section class="section">
-
-<div class="tos-title">
-<img src="peach.png">
-3. Về artist
-</div>
+<div class="tos-title">3. Về artist</div>
 
 <div class="tos-list">
 
-<p>Được phép mang tranh comm làm <b>sample</b> trừ khi khách đã trả phí private.</p>
+<p>Được phép mang tranh comm làm sample trừ khi khách đã trả phí private.</p>
 
-<p>Có quyền <b>từ chối</b> nếu đơn quá khả năng.</p>
+<p>Có quyền từ chối nếu đơn quá khả năng.</p>
 
-<p>Nếu quá deadline mà chưa có sketch → <b>refund 100% tiền cọc</b>.</p>
+<p>Nếu quá deadline mà chưa có sketch → refund 100% tiền cọc.</p>
 
 </div>
 
 </section>
 
-<!-- CONTACT -->
-
 <section id="contact" class="section contact">
 
-<div class="section-title">
-<img src="peach.png">
-Liên hệ Commission
-</div>
+<div class="price-title">Liên hệ Commission</div>
 
 <a href="https://www.facebook.com/kemdao.peach/" target="_blank">
 Liên hệ qua Facebook
@@ -452,5 +403,6 @@ document.body.appendChild(petal)
 
 </body>
 </html>
+
 
 
