@@ -82,4 +82,298 @@ box-shadow:0 2px 0 #cc6c81;
 /* HERO */
 
 .hero{
-text-al
+text-align:center;
+padding:60px 20px;
+}
+
+.avatar{
+width:180px;
+height:180px;
+border-radius:50%;
+border:6px solid #f3b7c1;
+object-fit:cover;
+}
+
+.hero h1{
+font-size:48px;
+margin:15px 0 5px;
+}
+
+.subtitle{
+color:#9b7a80;
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:12px 22px;
+margin:8px;
+border-radius:30px;
+border:2px solid #f3a0ad;
+background:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn img{
+width:18px;
+}
+
+.btn:hover{
+background:#f3a0ad;
+color:white;
+transform:scale(1.05);
+}
+
+/* SECTION */
+
+.section{
+padding:70px 10%;
+text-align:center;
+}
+
+.section h2{
+font-size:38px;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.gallery-grid img{
+width:100%;
+border-radius:12px;
+transition:0.3s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* PRICE */
+
+.price-box{
+background:#f8f1f1;
+padding:40px;
+border-radius:20px;
+margin-top:30px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#ec8f9f;
+color:white;
+padding:14px;
+}
+
+td{
+padding:14px;
+border-bottom:1px solid #eee;
+}
+
+/* TOS */
+
+.tos{
+max-width:800px;
+margin:auto;
+text-align:left;
+line-height:1.8;
+}
+
+/* SAKURA */
+
+.sakura{
+position:fixed;
+top:-20px;
+font-size:18px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-20px)}
+100%{transform:translateY(110vh)}
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🌸 Meiira</div>
+
+<nav>
+
+<a href="#home">Trang chủ</a>
+<a href="#gallery">Gallery</a>
+<a href="#price">Giá & Điều khoản</a>
+<a href="#tos">TOS</a>
+<a class="contact-btn" href="LINK_FACEBOOK">Liên hệ</a>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<img src="avatar.jpg" class="avatar">
+
+<h1>Meiira</h1>
+
+<div class="subtitle">Anime & Chibi Artist</div>
+
+<div>
+
+<button class="btn">
+<img src="peach.png"> Gallery
+</button>
+
+<button class="btn">
+<img src="peach.png"> Bảng giá
+</button>
+
+<button class="btn" onclick="window.open('LINK_FACEBOOK')">
+<img src="peach.png"> Liên hệ
+</button>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section" id="gallery">
+
+<h2>🌸 Gallery</h2>
+
+<div class="gallery-grid">
+
+<img src="sample1.jpg">
+<img src="sample2.jpg">
+<img src="sample3.jpg">
+<img src="sample4.jpg">
+
+</div>
+
+</section>
+
+<!-- PRICE -->
+
+<section class="section" id="price">
+
+<h2>🌸 Bảng Giá</h2>
+
+<div class="price-box">
+
+<table>
+
+<tr>
+<th>Loại</th>
+<th>Sketch</th>
+<th>Color</th>
+<th>Full</th>
+</tr>
+
+<tr>
+<td>Headshot</td>
+<td>50.000₫</td>
+<td>80.000₫</td>
+<td>100.000₫</td>
+</tr>
+
+<tr>
+<td>Chest-up</td>
+<td>80.000₫</td>
+<td>100.000₫</td>
+<td>135.000₫</td>
+</tr>
+
+<tr>
+<td>Half-body</td>
+<td>110.000₫</td>
+<td>150.000₫</td>
+<td>200.000₫</td>
+</tr>
+
+</table>
+
+<p>(Hiện tại không nhận full body)</p>
+
+</div>
+
+</section>
+
+<!-- TOS -->
+
+<section class="section" id="tos">
+
+<h2>🌸 Terms of Service</h2>
+
+<div class="tos">
+
+<p>• Thanh toán full sau khi chốt sketch.</p>
+
+<p>• Thêm character: +100% giá gốc.</p>
+
+<p>• Thanh toán: Bank / Momo (chụp bill sau khi chuyển).</p>
+
+<p>• Deadline: 1–2 tuần.</p>
+
+<p>• Rush commission: 50k – 200k.</p>
+
+<p>• Sửa miễn phí trước khi chốt sketch.</p>
+
+<p>• Sửa sau sketch hoặc final: 2k – 5k / lần.</p>
+
+<p>• Không nhận: furry, mecha, người thật, người già, pose quá khó.</p>
+
+<p>• Private commission: +50.000₫.</p>
+
+</div>
+
+</section>
+
+<script>
+
+for(let i=0;i<40;i++){
+
+let petal=document.createElement("div")
+
+petal.className="sakura"
+
+petal.innerHTML="🌸"
+
+petal.style.left=Math.random()*100+"vw"
+
+petal.style.animationDuration=5+Math.random()*7+"s"
+
+petal.style.opacity=Math.random()
+
+document.body.appendChild(petal)
+
+}
+
+</script>
+
+</body>
+</html>
