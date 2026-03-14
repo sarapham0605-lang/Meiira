@@ -12,9 +12,7 @@
 
 <style>
 
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
 margin:0;
@@ -41,38 +39,20 @@ font-size:22px;
 font-weight:700;
 }
 
-.logo img{
-width:36px;
-}
+.logo img{width:38px;}
 
 .menu a{
 margin:0 15px;
 text-decoration:none;
 color:#7a5a5a;
 font-weight:600;
-position:relative;
 }
 
-.menu a:hover{
-color:#e56c8d;
-}
-
-.menu a:hover::after{
-content:"";
-width:100%;
-height:2px;
-background:#e56c8d;
-position:absolute;
-bottom:-4px;
-left:0;
-}
+.menu a:hover{color:#e56c8d;}
 
 /* HERO */
 
-.hero{
-text-align:center;
-padding:70px 20px;
-}
+.hero{text-align:center;padding:70px 20px;}
 
 .avatar{
 width:180px;
@@ -82,15 +62,9 @@ border:6px solid #f3a7b6;
 object-fit:cover;
 }
 
-.hero h1{
-font-size:46px;
-margin:15px 0 5px;
-}
+.hero h1{font-size:46px;margin:15px 0 5px;}
 
-.subtitle{
-color:#a67b7b;
-font-size:18px;
-}
+.subtitle{color:#a67b7b;font-size:18px;}
 
 /* CARD */
 
@@ -117,9 +91,7 @@ margin-bottom:25px;
 font-size:30px;
 }
 
-.section-title img{
-width:34px;
-}
+.section-title img{width:34px;}
 
 /* GALLERY */
 
@@ -135,11 +107,9 @@ border-radius:14px;
 transition:0.3s;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
-}
+.gallery img:hover{transform:scale(1.05);}
 
-/* PRICE */
+/* TABLE */
 
 table{
 width:100%;
@@ -152,13 +122,9 @@ color:white;
 padding:14px;
 }
 
-td{
-padding:14px;
-}
+td{padding:14px;}
 
-tr:nth-child(even){
-background:#f9eeee;
-}
+tr:nth-child(even){background:#f9eeee;}
 
 /* TOS */
 
@@ -172,23 +138,28 @@ align-items:center;
 gap:10px;
 }
 
-.tos-title img{
-width:22px;
-}
+.tos-title img{width:22px;}
 
-.tos-list{
-line-height:1.9;
-}
+.tos-list{line-height:1.9;}
 
-.tos-list p{
-margin:8px 0;
+.tos-list p{margin:8px 0;}
+
+/* AI WARNING */
+
+.ai-warning{
+margin-top:15px;
+padding:15px 20px;
+background:#ffd6dc;
+border:2px solid #f3a7b6;
+border-radius:12px;
+color:#d14a67;
+font-weight:700;
+text-align:center;
 }
 
 /* CONTACT */
 
-.contact{
-text-align:center;
-}
+.contact{text-align:center;}
 
 .contact a{
 display:inline-block;
@@ -203,9 +174,7 @@ box-shadow:0 8px 20px rgba(229,108,141,0.4);
 transition:0.3s;
 }
 
-.contact a:hover{
-transform:scale(1.05);
-}
+.contact a:hover{transform:scale(1.05);}
 
 /* SAKURA */
 
@@ -317,7 +286,7 @@ Bảng Giá
 
 </section>
 
-<!-- TOS -->
+<!-- I. TOS -->
 
 <section id="tos" class="section">
 
@@ -337,7 +306,7 @@ Bảng Giá
 
 <p>Thêm character: <b>+100%</b> giá gốc.</p>
 
-<p>Phương thức thanh toán: <b>Bank / Momo</b> (Vui lòng chụp bill lại sau khi thanh toán).</p>
+<p>Phương thức thanh toán: <b>Bank / Momo</b>.</p>
 
 <p>Deadline từ <b>1 tuần đến 3 tuần</b>.</p>
 
@@ -350,6 +319,50 @@ Bảng Giá
 <p>Phí details sẽ được thương lượng.</p>
 
 <p>Phí thương mại: <b>x3</b> | Private: <b>x1.5</b></p>
+
+</div>
+
+</section>
+
+<!-- II KHÁCH -->
+
+<section class="section">
+
+<div class="tos-title">
+<img src="peach.png">
+2. Về khách hàng
+</div>
+
+<div class="tos-list">
+
+<p>Gửi đầy đủ <b>brief</b> và để lại note, yêu cầu cho mình.</p>
+
+<p>Có thể trì hoãn tiền comm <b>2 tuần</b>, nếu quá 2 tuần mình sẽ cân nhắc giao dịch.</p>
+
+<div class="ai-warning">
+TUYỆT ĐỐI KHÔNG FEED CHO A.I
+</div>
+
+</div>
+
+</section>
+
+<!-- III ARTIST -->
+
+<section class="section">
+
+<div class="tos-title">
+<img src="peach.png">
+3. Về artist
+</div>
+
+<div class="tos-list">
+
+<p>Được phép mang tranh comm làm <b>sample</b> trừ khi khách đã trả phí <b>private</b>.</p>
+
+<p>Có quyền <b>từ chối</b> nếu đơn quá khả năng.</p>
+
+<p>Comm nếu quá deadline nhưng vẫn chưa có sketch sẽ <b>refund 100% tiền cọc</b> cho khách.</p>
 
 </div>
 
@@ -388,66 +401,7 @@ petal.style.opacity=Math.random()
 
 document.body.appendChild(petal)
 
-<section class="section">
-
-<div class="tos-title">
-<img src="peach.png">
-2. Về khách hàng
-</div>
-
-<div class="tos-list">
-
-<p>Gửi đầy đủ <b>brief</b> và để lại <b>note, yêu cầu</b> cho mình.</p>
-
-<p>Có thể trì hoãn tiền comm <b>2 tuần</b>, nếu quá 2 tuần mình sẽ cân nhắc giao dịch.</p>
-
-<div class="ai-warning">
-TUYỆT ĐỐI KHÔNG FEED CHO A.I
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="tos-title">
-<img src="peach.png">
-3. Về artist
-</div>
-
-<div class="tos-list">
-
-<p>Được phép mang tranh comm làm <b>sample</b> trừ khi khách đã trả phí <b>private</b>.</p>
-
-<p>Có quyền <b>từ chối</b> nếu đơn quá khả năng.</p>
-
-<p>Comm nếu quá deadline nhưng vẫn chưa có sketch sẽ phải <b>refund 100% tiền cọc</b> cho khách.</p>
-
-</div>
-
-</section>
-.ai-warning{
-
-margin-top:15px;
-padding:15px 20px;
-
-background:#ffd6dc;
-border:2px solid #f3a7b6;
-
-border-radius:12px;
-
-color:#d14a67;
-
-font-weight:700;
-
-text-align:center;
-
-letter-spacing:1px;
-
 }
-
 
 </script>
 
