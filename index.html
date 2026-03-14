@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,8 +19,8 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:'Be Vietnam Pro',sans-serif;
-background:#f5ecec;
-color:#5a4040;
+background:#f6eded;
+color:#5c4040;
 }
 
 /* NAVBAR */
@@ -31,8 +33,15 @@ padding:20px 8%;
 }
 
 .logo{
-font-size:22px;
+display:flex;
+align-items:center;
+gap:10px;
 font-weight:700;
+font-size:20px;
+}
+
+.logo img{
+width:24px;
 }
 
 .menu a{
@@ -44,36 +53,36 @@ position:relative;
 }
 
 .menu a:hover{
-color:#e96b8c;
+color:#e56c8d;
 }
 
 .menu a:hover::after{
 content:"";
-height:2px;
 width:100%;
-background:#e96b8c;
+height:2px;
+background:#e56c8d;
 position:absolute;
-left:0;
 bottom:-4px;
+left:0;
 }
 
 /* CONTACT BUTTON */
 
 .contact{
-background:#e96b8c;
+background:#e56c8d;
 color:white;
 padding:10px 22px;
 border-radius:25px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 6px 15px rgba(233,107,140,0.4);
+box-shadow:0 6px 15px rgba(229,108,141,0.4);
 }
 
 /* HERO */
 
 .hero{
 text-align:center;
-padding:60px 20px;
+padding:70px 20px;
 }
 
 .avatar{
@@ -85,7 +94,7 @@ object-fit:cover;
 }
 
 .hero h1{
-font-size:48px;
+font-size:46px;
 margin:15px 0 5px;
 }
 
@@ -100,13 +109,25 @@ padding:80px 10%;
 text-align:center;
 }
 
+.section-title{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+}
+
+.section-title img{
+width:26px;
+}
+
 h2{
-font-size:36px;
-margin-bottom:10px;
+font-size:34px;
+margin:0;
 }
 
 .section-sub{
 color:#9c7b7b;
+margin-top:10px;
 margin-bottom:40px;
 }
 
@@ -131,7 +152,7 @@ transform:scale(1.05);
 /* PRICE */
 
 .price-box{
-background:#f1e4e4;
+background:#f2e4e4;
 padding:40px;
 border-radius:20px;
 }
@@ -142,7 +163,7 @@ border-collapse:collapse;
 }
 
 th{
-background:#e96b8c;
+background:#e56c8d;
 color:white;
 padding:15px;
 }
@@ -164,7 +185,7 @@ margin:auto;
 line-height:1.8;
 }
 
-/* CONTACT SECTION */
+/* CONTACT */
 
 .contact-section{
 text-align:center;
@@ -173,13 +194,13 @@ text-align:center;
 .contact-button{
 display:inline-block;
 margin-top:20px;
-background:#e96b8c;
+background:#e56c8d;
 color:white;
 padding:16px 35px;
 border-radius:30px;
 font-size:18px;
 text-decoration:none;
-box-shadow:0 8px 18px rgba(233,107,140,0.4);
+box-shadow:0 8px 18px rgba(229,108,141,0.4);
 transition:0.3s;
 }
 
@@ -203,13 +224,17 @@ gap:10px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <nav>
 
-<div class="logo">🍑 Meiira</div>
+<div class="logo">
+<img src="peach.png">
+Meiira
+</div>
 
 <div class="menu">
 
@@ -232,7 +257,9 @@ gap:10px;
 
 <h1>Meiira</h1>
 
-<div class="subtitle">Artist vẽ Anime & Chibi</div>
+<div class="subtitle">
+Artist vẽ Anime & Chibi
+</div>
 
 </section>
 
@@ -240,7 +267,12 @@ gap:10px;
 
 <section id="gallery">
 
-<h2>🌸 Gallery</h2>
+<div class="section-title">
+
+<img src="peach.png">
+<h2>Gallery</h2>
+
+</div>
 
 <div class="section-sub">
 Tuyển tập các tác phẩm đã thực hiện
@@ -261,7 +293,12 @@ Tuyển tập các tác phẩm đã thực hiện
 
 <section id="price">
 
-<h2>🍑 Bảng Giá</h2>
+<div class="section-title">
+
+<img src="peach.png">
+<h2>Bảng Giá</h2>
+
+</div>
 
 <div class="price-box">
 
@@ -303,7 +340,12 @@ Tuyển tập các tác phẩm đã thực hiện
 
 <section id="tos">
 
-<h2>📜 Điều khoản (TOS)</h2>
+<div class="section-title">
+
+<img src="peach.png">
+<h2>Điều khoản (TOS)</h2>
+
+</div>
 
 <div class="tos">
 
@@ -311,9 +353,9 @@ Tuyển tập các tác phẩm đã thực hiện
 
 <p>• Thêm character: +100% giá gốc.</p>
 
-<p>• Phương thức thanh toán: Bank / Momo (vui lòng chụp bill).</p>
+<p>• Thanh toán: Bank / Momo (vui lòng chụp bill).</p>
 
-<p>• Deadline từ 1 – 2 tuần.</p>
+<p>• Deadline: 1 – 2 tuần.</p>
 
 <p>• Có nhận rush (50k – 200k tùy deadline).</p>
 
@@ -321,7 +363,7 @@ Tuyển tập các tác phẩm đã thực hiện
 
 <p>• Sửa sau sketch/line hoặc final: 2k – 5k mỗi lần.</p>
 
-<p>• Không nhận vẽ: furry, mecha, người thật, người già, pose quá khó.</p>
+<p>• Không nhận vẽ: background quá khó, furry, mecha, người thật, người già.</p>
 
 <p>• Phí detail sẽ thương lượng.</p>
 
@@ -335,10 +377,19 @@ Tuyển tập các tác phẩm đã thực hiện
 
 <section id="contact" class="contact-section">
 
-<h2>💌 Liên hệ Commission</h2>
+<div class="section-title">
 
-<a class="contact-button" href="LINK_FACEBOOK" target="_blank">
+<img src="peach.png">
+<h2>Liên hệ Commission</h2>
+
+</div>
+
+<a class="contact-button"
+href="https://www.facebook.com/kemdao.peach/"
+target="_blank">
+
 Liên hệ qua Facebook
+
 </a>
 
 </section>
