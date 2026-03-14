@@ -20,96 +20,207 @@ color:#5b4545;
 overflow-x:hidden;
 }
 
-/* NAV */
+/* NAVBAR */
 
 nav{
+
+position:sticky;
+top:0;
+
 display:flex;
 justify-content:space-between;
-padding:22px 8%;
 align-items:center;
+
+padding:18px 8%;
+
+background:#ffffffd9;
+backdrop-filter:blur(6px);
+
+z-index:1000;
+
 }
 
-.logo{
+.menu{
+
 display:flex;
 align-items:center;
-gap:10px;
-font-weight:700;
-font-size:22px;
-}
+gap:25px;
 
-.logo img{width:38px;}
+}
 
 .menu a{
-margin:0 12px;
+
 text-decoration:none;
-font-weight:600;
+
 color:#6d5454;
+
+font-weight:600;
+
+padding-bottom:6px;
+
+position:relative;
+
 }
 
-.menu a:hover{color:#d85d7b;}
+/* underline animation */
+
+.menu a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:0;
+
+width:0%;
+
+height:3px;
+
+background:#e88fa2;
+
+transition:.3s;
+
+}
+
+.menu a:hover::after{
+
+width:100%;
+
+}
+
+.menu a.active::after{
+
+width:100%;
+
+}
+
+/* peach icon */
+
+.menu img{
+
+width:16px;
+
+margin-right:6px;
+
+vertical-align:middle;
+
+}
+
+/* contact button */
+
+.contact-btn{
+
+background:#e88fa2;
+
+color:white !important;
+
+padding:10px 22px;
+
+border-radius:25px;
+
+}
 
 /* HERO */
 
 .hero{
+
 text-align:center;
-padding:60px 20px;
+
+padding:70px 20px;
+
 }
 
 .avatar{
+
 width:180px;
 height:180px;
+
 border-radius:50%;
+
 border:6px solid #e8a3b0;
+
 object-fit:cover;
+
 }
 
 .hero h1{
+
 font-size:48px;
+
 margin:15px 0 5px;
+
 }
 
 .subtitle{
+
 color:#9c7575;
+
 }
 
 /* TITLES */
 
 .big-title{
+
 text-align:center;
+
 font-family:'Playfair Display',serif;
+
 font-size:42px;
+
 margin-bottom:8px;
+
 }
 
 .sub-title{
+
 text-align:center;
+
 color:#a67b7b;
+
 margin-bottom:35px;
+
 }
 
 /* CARD */
 
 .section{
+
 background:#f3e2e2;
+
 border-radius:22px;
+
 padding:40px;
+
 margin:40px auto;
+
 max-width:950px;
+
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
 transition:.3s;
+
 }
 
 .section:hover{
+
 transform:translateY(-6px);
+
 }
 
 /* GALLERY BUTTON */
 
 .filter{
+
 display:flex;
+
 justify-content:center;
+
 gap:15px;
+
 margin-bottom:30px;
+
 }
 
 .filter button{
@@ -127,8 +238,6 @@ font-weight:600;
 cursor:pointer;
 
 color:#7a5b5b;
-
-transition:.25s;
 
 }
 
@@ -266,6 +375,20 @@ margin-top:15px;
 
 }
 
+/* FOOTER */
+
+footer{
+
+text-align:center;
+
+padding:30px;
+
+font-size:13px;
+
+color:#8b6e6e;
+
+}
+
 /* PETALS */
 
 .sakura{
@@ -298,21 +421,29 @@ pointer-events:none;
 
 <nav>
 
-<div class="logo">
-<img src="peach.png">
-Milya Meiira
-</div>
-
 <div class="menu">
-<a href="#gallery">Gallery</a>
-<a href="#price">Bảng giá</a>
-<a href="#tos">Điều khoản</a>
-<a href="#contact">Liên hệ</a>
+
+<a href="#home">Trang chủ</a>
+
+<a href="#gallery">
+<img src="peach.png">
+Gallery
+</a>
+
+<a href="#price">
+<img src="peach.png">
+Giá & Điều khoản
+</a>
+
+<a href="#about">About Me</a>
+
+<a href="#contact" class="contact-btn">Liên hệ</a>
+
 </div>
 
 </nav>
 
-<section class="hero">
+<section id="home" class="hero">
 
 <img src="avatar.jpg" class="avatar">
 
@@ -428,40 +559,6 @@ Milya Meiira
 
 </section>
 
-<!-- TOS -->
-
-<h2 class="big-title">Điều Khoản</h2>
-
-<section id="tos">
-
-<div class="section">
-
-<div class="tos-title">1. Về khách hàng</div>
-
-<p>Gửi đầy đủ brief và note yêu cầu.</p>
-
-<p>Có thể trì hoãn tiền comm 2 tuần.</p>
-
-<div class="ai-warning">
-TUYỆT ĐỐI KHÔNG FEED CHO A.I
-</div>
-
-</div>
-
-<div class="section">
-
-<div class="tos-title">2. Về artist</div>
-
-<p>Được phép dùng tranh làm sample trừ khi khách trả phí private.</p>
-
-<p>Có quyền từ chối nếu đơn quá khả năng.</p>
-
-<p>Nếu quá deadline mà chưa có sketch → refund 100% tiền cọc.</p>
-
-</div>
-
-</section>
-
 <!-- CONTACT -->
 
 <section id="contact" class="section contact">
@@ -473,6 +570,12 @@ Liên hệ qua Facebook
 </a>
 
 </section>
+
+<footer>
+
+Do not repost or use my art without permission.
+
+</footer>
 
 <script>
 
@@ -533,5 +636,3 @@ document.body.appendChild(p)
 
 </body>
 </html>
-
-
