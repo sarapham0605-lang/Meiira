@@ -9,93 +9,86 @@
 <style>
 
 body{
-font-family:'Quicksand',sans-serif;
-background: linear-gradient(#ffd6dc,#ffc0cb);
 margin:0;
+font-family:'Quicksand',sans-serif;
+background:#f6eaea;
+color:#5a3a3a;
 text-align:center;
-color:#5a2a2a;
-overflow-x:hidden;
 }
 
-h1{
-font-size:40px;
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+}
+
+.logo{
+font-size:22px;
+font-weight:600;
+}
+
+.menu a{
+margin:0 15px;
+text-decoration:none;
+color:#7a5a5a;
+}
+
+.contact-btn{
+background:#f48ca3;
+color:white;
+padding:10px 20px;
+border-radius:20px;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
 margin-top:40px;
 }
 
-section{
-padding:40px 20px;
+.avatar{
+width:200px;
+height:200px;
+border-radius:50%;
+border:6px solid #f7b6c5;
+object-fit:cover;
 }
 
-.peach-btn{
-background:#ff7b8e;
-border:none;
-padding:15px 25px;
+h1{
+font-size:60px;
+margin:20px 0 10px;
+}
+
+.subtitle{
+color:#a27a7a;
+}
+
+/* BUTTONS */
+
+.buttons{
+margin-top:30px;
+}
+
+.buttons a{
 margin:10px;
-font-size:16px;
-border-radius:50px;
-color:white;
-cursor:pointer;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-transition:0.2s;
+padding:15px 30px;
+border-radius:25px;
+text-decoration:none;
+font-weight:600;
 }
 
-.peach-btn:hover{
-transform:scale(1.1);
-background:#ff5f77;
-}
-
-.price-table{
-margin:auto;
-border-collapse:collapse;
-background:white;
-border-radius:15px;
-overflow:hidden;
-}
-
-.price-table th,
-.price-table td{
-padding:12px 18px;
-border-bottom:1px solid #eee;
-}
-
-.price-table th{
-background:#ff8ea1;
+.main{
+background:#f48ca3;
 color:white;
 }
 
-.card{
-background:white;
-border-radius:20px;
-padding:20px;
-max-width:800px;
-margin:auto;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.sample-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-max-width:800px;
-margin:auto;
-}
-
-.sample-grid div{
-background:#ffe5ea;
-padding:40px;
-border-radius:15px;
-}
-
-.falling{
-position:fixed;
-top:-50px;
-font-size:20px;
-animation:fall linear infinite;
-}
-
-@keyframes fall{
-0%{transform:translateY(-50px)}
-100%{transform:translateY(110vh)}
+.outline{
+border:2px solid #f48ca3;
+color:#f48ca3;
 }
 
 </style>
@@ -103,119 +96,41 @@ animation:fall linear infinite;
 
 <body>
 
-<h1>🍑 Meiira Commission</h1>
+<nav>
 
-<a href="https://www.facebook.com/kemdao.peach/" target="_blank">
-<button class="peach-btn">🍑 Liên hệ qua Facebook</button>
-</a>
+<div class="logo">🌸 Meiira</div>
 
-<section>
-
-<h2>Sample Normal</h2>
-
-<div class="sample-grid">
-<div>Sample 1</div>
-<div>Sample 2</div>
-<div>Sample 3</div>
+<div class="menu">
+<a href="#">Trang chủ</a>
+<a href="#">Gallery</a>
+<a href="#">Giá & Điều khoản</a>
+<a href="#">About Me</a>
+<a class="contact-btn" href="LINK_FACEBOOK">Liên hệ</a>
 </div>
 
-</section>
+</nav>
 
-<section>
+<div class="hero">
 
-<h2>Sample Chibi</h2>
+<img class="avatar" src="avatar.jpg">
 
-<div class="sample-grid">
-<div>Chibi 1</div>
-<div>Chibi 2</div>
-<div>Chibi 3</div>
-</div>
+<h1>Meiira</h1>
 
-</section>
+<div class="subtitle">Anime & Chibi Artist</div>
 
-<section>
+<div class="buttons">
 
-<h2>Bảng giá</h2>
+<a class="main" href="#">Xem Gallery</a>
 
-<table class="price-table">
+<a class="outline" href="#">Bảng Giá</a>
 
-<tr>
-<th>Loại</th>
-<th>Sketch</th>
-<th>Color</th>
-<th>Full</th>
-</tr>
+<a class="outline" href="#">About Me</a>
 
-<tr>
-<td>Headshot</td>
-<td>50.000₫</td>
-<td>80.000₫</td>
-<td>100.000₫</td>
-</tr>
-
-<tr>
-<td>Chest-up</td>
-<td>80.000₫</td>
-<td>100.000₫</td>
-<td>135.000₫</td>
-</tr>
-
-<tr>
-<td>Half-body</td>
-<td>110.000₫</td>
-<td>150.000₫</td>
-<td>200.000₫</td>
-</tr>
-
-</table>
-
-<p>(Hiện tại mình không nhận full body)</p>
-
-</section>
-
-<section>
-
-<h2>TOS</h2>
-
-<div class="card">
-
-<p>Thanh toán full tiền comm sau khi chốt sketch.</p>
-
-<p>Thêm character: +100% giá gốc.</p>
-
-<p>Phương thức thanh toán: Bank / Momo (vui lòng chụp bill sau khi thanh toán).</p>
-
-<p>Deadline từ 1 tuần đến 2 tuần, có thể nhanh hơn nếu mình rảnh.</p>
-
-<p>Có nhận rush (50.000₫ – 200.000₫ tùy deadline).</p>
-
-<p>Sửa miễn phí trước khi chốt sketch.</p>
-
-<p>Sửa sau sketch (line) hoặc final: 2k – 5k / lần.</p>
-
-<p>Không nhận vẽ: background quá khó, pose quá khó, người già, người thật, furry, mecha, mật độ chi tiết cao.</p>
-
-<p>Phí detail sẽ thương lượng giữa artist và khách.</p>
-
-<p>Private: +50.000₫</p>
+<a class="main" href="LINK_FACEBOOK">Liên hệ Commission</a>
 
 </div>
 
-</section>
-
-<script>
-
-for(let i=0;i<25;i++){
-let petal=document.createElement("div");
-petal.className="falling";
-petal.innerHTML="🌸";
-petal.style.left=Math.random()*100+"vw";
-petal.style.animationDuration=5+Math.random()*5+"s";
-petal.style.opacity=Math.random();
-document.body.appendChild(petal);
-}
-
-</script>
+</div>
 
 </body>
 </html>
