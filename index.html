@@ -85,7 +85,7 @@ padding-bottom:6px;
 
 }
 
-/* underline animation */
+/* underline */
 
 .menu a::after{
 
@@ -112,7 +112,7 @@ width:100%;
 
 }
 
-/* contact button */
+/* contact */
 
 .contact-btn{
 
@@ -170,7 +170,10 @@ color:#9c7575;
 
 .section-title{
 
-text-align:center;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
 
 font-family:'Playfair Display',serif;
 
@@ -180,10 +183,12 @@ margin-top:80px;
 
 }
 
+/* peach icon size */
+
 .section-title img{
 
-width:22px;
-margin-right:8px;
+height:38px;
+width:auto;
 
 }
 
@@ -213,7 +218,7 @@ transform:translateY(-5px);
 
 }
 
-/* GALLERY FILTER */
+/* FILTER */
 
 .filter{
 
@@ -250,7 +255,7 @@ color:white;
 
 }
 
-/* GALLERY GRID */
+/* GALLERY */
 
 .gallery{
 
@@ -299,8 +304,6 @@ tr:nth-child(even){
 background:#f9eeee;
 
 }
-
-/* PRICE TITLE */
 
 .price-title{
 
@@ -417,7 +420,6 @@ pointer-events:none;
 <div class="logo">
 
 <img src="peach.png">
-
 Milya Meiira
 
 </div>
@@ -428,11 +430,9 @@ Milya Meiira
 
 <a href="#gallery">Gallery</a>
 
-<a href="#price">Giá</a>
+<a href="#price">Bảng giá</a>
 
-<a href="#tos">Điều khoản dịch vụ</a>
-
-<a href="#about">About Me</a>
+<a href="#tos">Điều khoản</a>
 
 <a href="#contact" class="contact-btn">Liên hệ</a>
 
@@ -453,7 +453,10 @@ Milya Meiira
 <!-- GALLERY -->
 
 <h2 class="section-title">
-<img src="peach.png"> Gallery
+
+<img src="peach.png">
+Gallery
+
 </h2>
 
 <section id="gallery" class="section">
@@ -472,7 +475,10 @@ Milya Meiira
 <!-- PRICE -->
 
 <h2 class="section-title">
-<img src="peach.png"> Bảng giá
+
+<img src="peach.png">
+Bảng giá
+
 </h2>
 
 <section id="price">
@@ -560,7 +566,10 @@ Milya Meiira
 <!-- TOS -->
 
 <h2 class="section-title">
-<img src="peach.png"> Điều khoản dịch vụ
+
+<img src="peach.png">
+Điều khoản dịch vụ
+
 </h2>
 
 <section id="tos">
@@ -570,7 +579,6 @@ Milya Meiira
 <div class="tos-title">1. Về khách hàng</div>
 
 <p>Gửi đầy đủ brief và note yêu cầu.</p>
-
 <p>Có thể trì hoãn tiền comm 2 tuần.</p>
 
 <div class="ai-warning">
