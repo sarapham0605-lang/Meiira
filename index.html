@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Meiira Commission</title>
+<title>Milya Meiira Commission</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -109,22 +109,31 @@ transition:0.3s;
 
 .gallery img:hover{transform:scale(1.05);}
 
-/* TABLE */
+/* PRICE TABLE */
 
-table{
+.price-table{
 width:100%;
 border-collapse:collapse;
 }
 
-th{
+.price-table th{
 background:#e56c8d;
 color:white;
 padding:14px;
 }
 
-td{padding:14px;}
+.price-table td{
+padding:14px;
+text-align:center;
+}
 
-tr:nth-child(even){background:#f9eeee;}
+.price-table tr:nth-child(even){
+background:#f9eeee;
+}
+
+.price-table .sketch{
+background:#f7d6de;
+}
 
 /* TOS */
 
@@ -149,12 +158,13 @@ gap:10px;
 .ai-warning{
 margin-top:15px;
 padding:15px 20px;
-background:#ffd6dc;
-border:2px solid #f3a7b6;
+background:#f4c8d2;
+border:2px solid #e56c8d;
 border-radius:12px;
-color:#d14a67;
+color:#c73b60;
 font-weight:700;
 text-align:center;
+letter-spacing:1px;
 }
 
 /* CONTACT */
@@ -201,7 +211,7 @@ pointer-events:none;
 
 <div class="logo">
 <img src="peach.png">
-Meiira
+Milya Meiira
 </div>
 
 <div class="menu">
@@ -217,7 +227,7 @@ Meiira
 
 <img src="avatar.jpg" class="avatar">
 
-<h1>Meiira</h1>
+<h1>Milya Meiira</h1>
 
 <div class="subtitle">
 Digital Artist
@@ -254,29 +264,29 @@ Gallery
 Bảng Giá
 </div>
 
-<table>
+<table class="price-table">
 
 <tr>
 <th>Loại</th>
-<th>Sketch Color</th>
+<th class="sketch">Sketch Color</th>
 <th>Full</th>
 </tr>
 
 <tr>
 <td>Headshot</td>
-<td>50.000₫</td>
+<td class="sketch">50.000₫</td>
 <td>100.000₫</td>
 </tr>
 
 <tr>
 <td>Chest-up</td>
-<td>80.000₫</td>
+<td class="sketch">80.000₫</td>
 <td>135.000₫</td>
 </tr>
 
 <tr>
 <td>Half-body</td>
-<td>110.000₫</td>
+<td class="sketch">110.000₫</td>
 <td>200.000₫</td>
 </tr>
 
@@ -286,7 +296,7 @@ Bảng Giá
 
 </section>
 
-<!-- I. TOS -->
+<!-- TOS -->
 
 <section id="tos" class="section">
 
@@ -302,29 +312,23 @@ Bảng Giá
 
 <div class="tos-list">
 
-<p>Cọc <b>30%</b> sau khi chốt slot - wip, <b>THANH TOÁN full</b> tiền comm sau khi nhận được sketch.</p>
+<p>Cọc <b>30%</b> sau khi chốt slot.</p>
 
-<p>Thêm character: <b>+100%</b> giá gốc.</p>
+<p>Thanh toán <b>full</b> sau khi nhận sketch.</p>
 
-<p>Phương thức thanh toán: <b>Bank / Momo</b>.</p>
+<p>Thêm character: <b>+100%</b>.</p>
 
-<p>Deadline từ <b>1 tuần đến 3 tuần</b>.</p>
+<p>Thanh toán: <b>Bank / Momo</b>.</p>
 
-<p>Có nhận <b>rush</b> 50.000 – 300.000₫.</p>
+<p>Deadline: <b>1–3 tuần</b>.</p>
 
-<p>Phí sửa <b>miễn phí</b> trước khi chốt sketch.</p>
+<p>Có nhận rush.</p>
 
-<p><b>Không nhận vẽ:</b> background khó, furry, mecha, người thật.</p>
-
-<p>Phí details sẽ được thương lượng.</p>
-
-<p>Phí thương mại: <b>x3</b> | Private: <b>x1.5</b></p>
+<p>Không vẽ: furry, mecha, người thật.</p>
 
 </div>
 
 </section>
-
-<!-- II KHÁCH -->
 
 <section class="section">
 
@@ -335,9 +339,9 @@ Bảng Giá
 
 <div class="tos-list">
 
-<p>Gửi đầy đủ <b>brief</b> và để lại note, yêu cầu cho mình.</p>
+<p>Gửi đầy đủ brief và để lại yêu cầu.</p>
 
-<p>Có thể trì hoãn tiền comm <b>2 tuần</b>, nếu quá 2 tuần mình sẽ cân nhắc giao dịch.</p>
+<p>Có thể trì hoãn tiền comm 2 tuần.</p>
 
 <div class="ai-warning">
 TUYỆT ĐỐI KHÔNG FEED CHO A.I
@@ -346,8 +350,6 @@ TUYỆT ĐỐI KHÔNG FEED CHO A.I
 </div>
 
 </section>
-
-<!-- III ARTIST -->
 
 <section class="section">
 
@@ -358,17 +360,15 @@ TUYỆT ĐỐI KHÔNG FEED CHO A.I
 
 <div class="tos-list">
 
-<p>Được phép mang tranh comm làm <b>sample</b> trừ khi khách đã trả phí <b>private</b>.</p>
+<p>Được phép dùng tranh comm làm sample trừ khi khách trả phí private.</p>
 
-<p>Có quyền <b>từ chối</b> nếu đơn quá khả năng.</p>
+<p>Có quyền từ chối nếu đơn quá khả năng.</p>
 
-<p>Comm nếu quá deadline nhưng vẫn chưa có sketch sẽ <b>refund 100% tiền cọc</b> cho khách.</p>
+<p>Quá deadline nhưng chưa sketch sẽ refund 100% cọc.</p>
 
 </div>
 
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact" class="section contact">
 
@@ -377,7 +377,7 @@ TUYỆT ĐỐI KHÔNG FEED CHO A.I
 Liên hệ Commission
 </div>
 
-<a href="https://www.facebook.com/kemdao.peach/" target="_blank">
+<a href="https://www.facebook.com/" target="_blank">
 Liên hệ qua Facebook
 </a>
 
@@ -407,3 +407,4 @@ document.body.appendChild(petal)
 
 </body>
 </html>
+
