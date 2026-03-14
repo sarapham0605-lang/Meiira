@@ -19,7 +19,7 @@ background:#f6eeee;
 color:#5b4545;
 }
 
-/* NAV */
+/* NAVBAR */
 
 nav{
 
@@ -36,9 +36,8 @@ padding:18px 8%;
 
 background:white;
 
-z-index:1000;
-
-transition:0.3s;
+z-index:999;
+transition:.3s;
 
 }
 
@@ -48,8 +47,6 @@ background:rgba(255,255,255,0.7);
 backdrop-filter:blur(8px);
 
 }
-
-/* logo */
 
 .logo{
 
@@ -64,17 +61,15 @@ font-size:20px;
 
 .logo img{
 
-width:32px;
+width:30px;
 
 }
-
-/* menu */
 
 .menu{
 
 display:flex;
 align-items:center;
-gap:25px;
+gap:28px;
 
 }
 
@@ -86,19 +81,11 @@ color:#6d5454;
 font-weight:600;
 
 position:relative;
-
 padding-bottom:6px;
 
 }
 
-.menu a img{
-
-width:14px;
-margin-right:5px;
-
-}
-
-/* underline */
+/* underline animation */
 
 .menu a::after{
 
@@ -114,7 +101,7 @@ height:2px;
 
 background:#e07a8e;
 
-transition:0.25s;
+transition:.25s;
 
 }
 
@@ -130,7 +117,6 @@ width:100%;
 .contact-btn{
 
 background:#e88fa2;
-
 color:white;
 
 padding:10px 22px;
@@ -150,12 +136,11 @@ display:none;
 .hero{
 
 padding-top:120px;
-
 text-align:center;
 
 }
 
-.hero img{
+.avatar{
 
 width:170px;
 height:170px;
@@ -171,7 +156,6 @@ object-fit:cover;
 .hero h1{
 
 font-size:46px;
-
 margin:15px 0 5px;
 
 }
@@ -184,15 +168,22 @@ color:#9c7575;
 
 /* TITLES */
 
-.big-title{
-
-font-family:'Playfair Display',serif;
-
-font-size:42px;
+.section-title{
 
 text-align:center;
 
+font-family:'Playfair Display',serif;
+
+font-size:40px;
+
 margin-top:80px;
+
+}
+
+.section-title img{
+
+width:22px;
+margin-right:8px;
 
 }
 
@@ -212,7 +203,7 @@ max-width:950px;
 
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 
-transition:0.3s;
+transition:.3s;
 
 }
 
@@ -222,7 +213,7 @@ transform:translateY(-5px);
 
 }
 
-/* FILTER */
+/* GALLERY FILTER */
 
 .filter{
 
@@ -255,12 +246,11 @@ cursor:pointer;
 .filter button.active{
 
 background:#e88fa2;
-
 color:white;
 
 }
 
-/* gallery grid */
+/* GALLERY GRID */
 
 .gallery{
 
@@ -275,12 +265,11 @@ gap:18px;
 .gallery img{
 
 width:100%;
-
 border-radius:12px;
 
 }
 
-/* tables */
+/* TABLE */
 
 table{
 
@@ -301,7 +290,6 @@ padding:14px;
 td{
 
 padding:14px;
-
 text-align:center;
 
 }
@@ -312,7 +300,7 @@ background:#f9eeee;
 
 }
 
-/* price title */
+/* PRICE TITLE */
 
 .price-title{
 
@@ -326,7 +314,7 @@ font-weight:700;
 
 }
 
-/* tos */
+/* TOS */
 
 .tos-title{
 
@@ -358,7 +346,7 @@ color:#a93c56;
 
 }
 
-/* contact */
+/* CONTACT */
 
 .contact{
 
@@ -380,13 +368,13 @@ text-decoration:none;
 
 }
 
-/* footer */
+/* FOOTER */
 
 footer{
 
 text-align:center;
 
-margin:60px 0 30px;
+margin:70px 0 30px;
 
 font-size:13px;
 
@@ -394,7 +382,7 @@ color:#8b6e6e;
 
 }
 
-/* sakura */
+/* SAKURA */
 
 .sakura{
 
@@ -427,21 +415,22 @@ pointer-events:none;
 <nav id="navbar">
 
 <div class="logo">
+
 <img src="peach.png">
+
 Milya Meiira
+
 </div>
 
 <div class="menu">
 
 <a href="#home">Trang chủ</a>
 
-<a href="#gallery">
-<img src="peach.png">Gallery
-</a>
+<a href="#gallery">Gallery</a>
 
-<a href="#price">
-<img src="peach.png">Giá & Điều khoản
-</a>
+<a href="#price">Giá</a>
+
+<a href="#tos">Điều khoản dịch vụ</a>
 
 <a href="#about">About Me</a>
 
@@ -453,7 +442,7 @@ Milya Meiira
 
 <section id="home" class="hero">
 
-<img src="avatar.jpg">
+<img src="avatar.jpg" class="avatar">
 
 <h1>Milya Meiira</h1>
 
@@ -461,7 +450,11 @@ Milya Meiira
 
 </section>
 
-<h2 class="big-title">🌸 Gallery</h2>
+<!-- GALLERY -->
+
+<h2 class="section-title">
+<img src="peach.png"> Gallery
+</h2>
 
 <section id="gallery" class="section">
 
@@ -476,7 +469,11 @@ Milya Meiira
 
 </section>
 
-<h2 class="big-title">Bảng Giá</h2>
+<!-- PRICE -->
+
+<h2 class="section-title">
+<img src="peach.png"> Bảng giá
+</h2>
 
 <section id="price">
 
@@ -560,6 +557,12 @@ Milya Meiira
 
 </section>
 
+<!-- TOS -->
+
+<h2 class="section-title">
+<img src="peach.png"> Điều khoản dịch vụ
+</h2>
+
 <section id="tos">
 
 <div class="section">
@@ -631,9 +634,7 @@ let list = type==="normal"?normal:chibi
 let html=""
 
 list.forEach(img=>{
-
 html+=`<img src="${img}">`
-
 })
 
 document.getElementById("gallery-container").innerHTML=html
@@ -667,13 +668,9 @@ window.addEventListener("scroll",function(){
 let nav=document.getElementById("navbar")
 
 if(window.scrollY>50){
-
 nav.classList.add("scrolled")
-
 }else{
-
 nav.classList.remove("scrolled")
-
 }
 
 })
@@ -682,4 +679,3 @@ nav.classList.remove("scrolled")
 
 </body>
 </html>
-
