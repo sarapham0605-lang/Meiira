@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
 
 <meta charset="UTF-8">
@@ -34,7 +33,6 @@ align-items:center;
 padding:18px 8%;
 
 background:white;
-
 z-index:999;
 transition:.3s;
 }
@@ -100,7 +98,7 @@ padding:10px 22px;
 border-radius:25px;
 
 position:relative;
-top:-3px; /* nhích lên cho thẳng hàng */
+top:-4px;
 }
 
 .contact-btn::after{
@@ -221,6 +219,32 @@ tr:nth-child(even){
 background:#f9eeee;
 }
 
+.price-title{
+font-size:24px;
+color:#d85d7b;
+margin-bottom:12px;
+font-weight:700;
+}
+
+/* TOS */
+
+.tos-title{
+font-size:22px;
+color:#d85d7b;
+font-weight:700;
+margin-bottom:12px;
+}
+
+.ai-warning{
+margin-top:15px;
+padding:14px;
+background:#f7c5ce;
+border-left:6px solid #d85d7b;
+border-radius:10px;
+font-weight:700;
+color:#a93c56;
+}
+
 /* CONTACT */
 
 .contact{
@@ -280,6 +304,211 @@ Milya Meiira
 <div class="subtitle">Digital Artist</div>
 
 </section>
+
+<!-- GALLERY -->
+
+<h2 class="section-title">
+<img src="peach.png">
+Gallery
+</h2>
+
+<section id="gallery" class="section">
+
+<div class="filter">
+
+<button class="active" onclick="showGallery('normal',this)">Normal</button>
+<button onclick="showGallery('chibi',this)">Chibi</button>
+
+</div>
+
+<div class="gallery" id="gallery-container"></div>
+
+</section>
+
+<!-- PRICE -->
+
+<h2 class="section-title">
+<img src="peach.png">
+Bảng giá
+</h2>
+
+<section id="price">
+
+<div class="section">
+
+<div class="price-title">1. Normal</div>
+
+<table>
+
+<tr>
+<th>Loại</th>
+<th>Sketch</th>
+<th>Sketch Color</th>
+<th>Full</th>
+</tr>
+
+<tr>
+<td>Headshot</td>
+<td>50.000₫</td>
+<td>80.000₫</td>
+<td>100.000₫</td>
+</tr>
+
+<tr>
+<td>Chest-up</td>
+<td>80.000₫</td>
+<td>100.000₫</td>
+<td>135.000₫</td>
+</tr>
+
+<tr>
+<td>Half-body</td>
+<td>110.000₫</td>
+<td>150.000₫</td>
+<td>200.000₫</td>
+</tr>
+
+</table>
+
+<p>(Hiện tại mình không nhận full body)</p>
+
+</div>
+
+<div class="section">
+
+<div class="price-title">2. Chibi</div>
+
+<table>
+
+<tr>
+<th>Loại</th>
+<th>Sketch</th>
+<th>Sketch Color</th>
+<th>Full</th>
+</tr>
+
+<tr>
+<td>Headshot</td>
+<td>30.000₫</td>
+<td>50.000₫</td>
+<td>80.000₫</td>
+</tr>
+
+<tr>
+<td>Half-body</td>
+<td>40.000₫</td>
+<td>60.000₫</td>
+<td>90.000₫</td>
+</tr>
+
+<tr>
+<td>Full-body</td>
+<td>50.000₫</td>
+<td>80.000₫</td>
+<td>110.000₫</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- TOS -->
+
+<h2 class="section-title">
+<img src="peach.png">
+Điều khoản dịch vụ
+</h2>
+
+<section id="tos">
+
+<div class="section">
+
+<div class="tos-title">1. Về khách hàng</div>
+
+<p>Gửi đầy đủ brief và note yêu cầu.</p>
+<p>Có thể trì hoãn tiền comm 2 tuần.</p>
+
+<div class="ai-warning">
+TUYỆT ĐỐI KHÔNG FEED CHO A.I
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="tos-title">2. Về artist</div>
+
+<p>Được phép dùng tranh làm sample trừ khi khách trả phí private.</p>
+
+<p>Có quyền từ chối nếu đơn quá khả năng.</p>
+
+<p>Nếu quá deadline mà chưa có sketch → refund 100% tiền cọc.</p>
+
+</div>
+
+</section>
+
+<section id="contact" class="section contact">
+
+<a href="https://www.facebook.com/kemdao.peach/">Liên hệ qua Facebook</a>
+
+</section>
+
+<footer>
+
+Do not repost or use my art without permission.
+
+</footer>
+
+<script>
+
+const normal=[
+"sample1.jpg","sample2.jpg","sample3.jpg",
+"sample4.jpg","sample5.jpg","sample6.jpg",
+"sample7.jpg","sample8.jpg","sample9.jpg"
+]
+
+const chibi=[
+"chibi1.jpg","chibi2.jpg","chibi3.jpg",
+"chibi4.jpg","chibi5.jpg","chibi6.jpg"
+]
+
+function showGallery(type,btn){
+
+document.querySelectorAll(".filter button")
+.forEach(b=>b.classList.remove("active"))
+
+btn.classList.add("active")
+
+let list = type==="normal"?normal:chibi
+
+let html=""
+
+list.forEach(img=>{
+html+=`<img src="${img}">`
+})
+
+document.getElementById("gallery-container").innerHTML=html
+
+}
+
+showGallery("normal",document.querySelector(".filter button"))
+
+window.addEventListener("scroll",function(){
+
+let nav=document.getElementById("navbar")
+
+if(window.scrollY>50){
+nav.classList.add("scrolled")
+}else{
+nav.classList.remove("scrolled")
+}
+
+})
+
+</script>
 
 </body>
 </html>
