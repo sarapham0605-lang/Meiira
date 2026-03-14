@@ -22,7 +22,6 @@ color:#5b4545;
 /* NAVBAR */
 
 nav{
-
 position:fixed;
 top:0;
 left:0;
@@ -38,375 +37,252 @@ background:white;
 
 z-index:999;
 transition:.3s;
-
 }
 
 nav.scrolled{
-
 background:rgba(255,255,255,0.7);
 backdrop-filter:blur(8px);
-
 }
 
-.logo{
+/* LOGO */
 
+.logo{
 display:flex;
 align-items:center;
 gap:10px;
-
 font-weight:700;
 font-size:20px;
-
 }
 
 .logo img{
-
 width:30px;
-
 }
 
-.menu{
+/* MENU */
 
+.menu{
 display:flex;
 align-items:center;
 gap:28px;
-
 }
 
 .menu a{
-
 text-decoration:none;
 color:#6d5454;
-
 font-weight:600;
-
 position:relative;
 padding-bottom:6px;
-
 }
 
 /* underline */
 
 .menu a::after{
-
 content:"";
-
 position:absolute;
-
 bottom:0;
 left:0;
-
 width:0%;
 height:2px;
-
 background:#e07a8e;
-
 transition:.25s;
-
 }
 
 .menu a:hover::after,
 .menu a.active::after{
-
 width:100%;
-
 }
 
-/* contact */
+/* CONTACT BUTTON */
 
 .contact-btn{
-
 background:#e88fa2;
 color:white;
-
-padding:10px 22px;
-
+padding:9px 22px;
 border-radius:25px;
-
+margin-top:-2px;
 }
 
 .contact-btn::after{
-
 display:none;
-
 }
 
 /* HERO */
 
 .hero{
-
 padding-top:120px;
 text-align:center;
-
 }
 
 .avatar{
-
 width:170px;
 height:170px;
-
 border-radius:50%;
-
 border:6px solid #e8a3b0;
-
 object-fit:cover;
-
 }
 
 .hero h1{
-
 font-size:46px;
 margin:15px 0 5px;
-
 }
 
 .subtitle{
-
 color:#9c7575;
-
 }
 
 /* TITLES */
 
 .section-title{
-
 display:flex;
 align-items:center;
 justify-content:center;
 gap:10px;
-
 font-family:'Playfair Display',serif;
-
 font-size:40px;
-
 margin-top:80px;
-
 }
-
-/* peach icon size */
 
 .section-title img{
-
 height:38px;
-width:auto;
-
 }
 
-/* CARD */
+/* SECTION CARD */
 
 .section{
-
 background:#f3e2e2;
-
 border-radius:20px;
-
 padding:40px;
-
 margin:40px auto;
-
 max-width:950px;
-
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
-
 transition:.3s;
-
 }
 
 .section:hover{
-
 transform:translateY(-5px);
-
 }
 
 /* FILTER */
 
 .filter{
-
 display:flex;
-
 justify-content:center;
-
 gap:14px;
-
 margin-bottom:25px;
-
 }
 
 .filter button{
-
 padding:12px 28px;
-
 border-radius:30px;
-
 border:2px solid #e88fa2;
-
 background:none;
-
 font-weight:600;
-
 cursor:pointer;
-
 }
 
 .filter button.active{
-
 background:#e88fa2;
 color:white;
-
 }
 
 /* GALLERY */
 
 .gallery{
-
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-
 gap:18px;
-
 }
 
 .gallery img{
-
 width:100%;
 border-radius:12px;
-
 }
 
 /* TABLE */
 
 table{
-
 width:100%;
 border-collapse:collapse;
-
 }
 
 th{
-
 background:#e88fa2;
 color:white;
-
 padding:14px;
-
 }
 
 td{
-
 padding:14px;
 text-align:center;
-
 }
 
 tr:nth-child(even){
-
 background:#f9eeee;
-
 }
 
 .price-title{
-
 font-size:24px;
-
 color:#d85d7b;
-
 margin-bottom:12px;
-
 font-weight:700;
-
 }
 
 /* TOS */
 
 .tos-title{
-
 font-size:22px;
-
 color:#d85d7b;
-
 font-weight:700;
-
 margin-bottom:12px;
-
 }
 
 .ai-warning{
-
 margin-top:15px;
-
 padding:14px;
-
 background:#f7c5ce;
-
 border-left:6px solid #d85d7b;
-
 border-radius:10px;
-
 font-weight:700;
-
 color:#a93c56;
-
 }
 
 /* CONTACT */
 
 .contact{
-
 text-align:center;
-
 }
 
 .contact a{
-
 background:#e88fa2;
-
 color:white;
-
 padding:14px 35px;
-
 border-radius:30px;
-
 text-decoration:none;
-
+font-weight:600;
 }
 
 /* FOOTER */
 
 footer{
-
 text-align:center;
-
 margin:70px 0 30px;
-
 font-size:13px;
-
 color:#8b6e6e;
-
 }
 
 /* SAKURA */
 
 .sakura{
-
 position:fixed;
-
 top:-10px;
-
 font-size:18px;
-
 animation:fall linear infinite;
-
 pointer-events:none;
-
 }
 
 @keyframes fall{
-
 0%{transform:translateY(-10px)}
-
 100%{transform:translateY(110vh)}
-
 }
 
 </style>
@@ -418,20 +294,15 @@ pointer-events:none;
 <nav id="navbar">
 
 <div class="logo">
-
 <img src="peach.png">
 Milya Meiira
-
 </div>
 
 <div class="menu">
 
 <a href="#home">Trang chủ</a>
-
 <a href="#gallery">Gallery</a>
-
 <a href="#price">Bảng giá</a>
-
 <a href="#tos">Điều khoản</a>
 
 <a href="#contact" class="contact-btn">Liên hệ</a>
@@ -453,10 +324,8 @@ Milya Meiira
 <!-- GALLERY -->
 
 <h2 class="section-title">
-
 <img src="peach.png">
 Gallery
-
 </h2>
 
 <section id="gallery" class="section">
@@ -475,10 +344,8 @@ Gallery
 <!-- PRICE -->
 
 <h2 class="section-title">
-
 <img src="peach.png">
 Bảng giá
-
 </h2>
 
 <section id="price">
@@ -566,10 +433,8 @@ Bảng giá
 <!-- TOS -->
 
 <h2 class="section-title">
-
 <img src="peach.png">
 Điều khoản dịch vụ
-
 </h2>
 
 <section id="tos">
@@ -602,8 +467,6 @@ TUYỆT ĐỐI KHÔNG FEED CHO A.I
 </section>
 
 <section id="contact" class="section contact">
-
-<div class="price-title">Liên hệ Commission</div>
 
 <a href="https://www.facebook.com/kemdao.peach/">Liên hệ qua Facebook</a>
 
