@@ -18,8 +18,6 @@ font-family:'Be Vietnam Pro',sans-serif;
 background:#f6eeee;
 color:#5b4545;
 overflow-x:hidden;
-position:relative;
-z-index:1;
 }
 
 /* NAVBAR */
@@ -44,8 +42,6 @@ nav.scrolled{
 background:rgba(255,255,255,0.7);
 backdrop-filter:blur(8px);
 }
-
-/* LOGO */
 
 .logo{
 display:flex;
@@ -76,28 +72,39 @@ padding-bottom:6px;
 }
 
 .menu a::after{
+
 content:"";
+
 position:absolute;
+
 left:0;
 bottom:0;
+
 width:0%;
+
 height:2px;
+
 background:#e07a8e;
+
 transition:.25s;
+
 }
 
 .menu a:hover::after{
 width:100%;
 }
 
-/* CONTACT NAV */
-
 .contact-btn{
+
 background:#e88fa2;
-color:white !important;
+color:white;
+
 padding:10px 24px;
+
 border-radius:30px;
+
 font-weight:600;
+
 }
 
 .contact-btn::after{
@@ -107,133 +114,208 @@ display:none;
 /* HERO */
 
 .hero{
+
 padding-top:120px;
 text-align:center;
+
 }
 
 /* AVATAR */
 
 .avatar{
+
 width:170px;
 height:170px;
+
 border-radius:50%;
+
 border:6px solid #e8a3b0;
+
 object-fit:cover;
+
 transition:.35s;
+
 }
 
 .avatar:hover{
+
 transform:translateY(-8px) scale(1.05);
+
 box-shadow:0 12px 25px rgba(0,0,0,0.2);
+
 }
+
+/* BUTTONS BELOW AVATAR */
+
+.hero-buttons{
+
+margin-top:30px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-buttons a{
+
+padding:14px 28px;
+
+border-radius:40px;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.3s;
+
+box-shadow:0 6px 12px rgba(0,0,0,0.08);
+
+}
+
+/* pink buttons */
+
+.btn-filled{
+
+background:#e88fa2;
+
+color:white;
+
+}
+
+/* outline buttons */
+
+.btn-outline{
+
+background:white;
+
+color:#e88fa2;
+
+border:2px solid #e88fa2;
+
+}
+
+/* hover */
+
+.hero-buttons a:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+
+}
+
+/* NAME */
 
 .hero h1{
 font-size:46px;
 margin:15px 0 5px;
 }
 
-/* BUTTON MENU */
-
-.hero-buttons{
-margin-top:35px;
-display:flex;
-justify-content:center;
-gap:22px;
-flex-wrap:wrap;
-}
-
-.hero-buttons a{
-
-padding:14px 30px;
-border-radius:35px;
-font-weight:600;
-text-decoration:none;
-transition:.25s;
-
-}
-
-/* pink filled */
-
-.btn-fill{
-background:#e88fa2;
-color:white;
-}
-
-/* outline */
-
-.btn-outline{
-border:2px solid #e88fa2;
-color:#e88fa2;
-}
-
-/* hover */
-
-.hero-buttons a:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
+.subtitle{
+color:#9c7575;
 }
 
 /* TITLES */
 
 .section-title{
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 gap:10px;
+
 font-family:'Playfair Display',serif;
+
 font-size:40px;
-margin-top:90px;
+
+margin-top:80px;
+
 }
 
 .section-title img{
 height:38px;
 }
 
-/* SECTION BOX */
+/* SECTION */
 
 .section{
+
 background:#f3e2e2;
+
 border-radius:20px;
+
 padding:40px;
+
 margin:40px auto;
+
 max-width:950px;
+
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
 }
 
 /* FILTER */
 
 .filter{
+
 display:flex;
+
 justify-content:center;
+
 gap:14px;
+
 margin-bottom:25px;
+
 }
 
 .filter button{
+
 padding:12px 28px;
+
 border-radius:30px;
+
 border:2px solid #e88fa2;
+
 background:none;
+
 font-weight:600;
+
 cursor:pointer;
+
 }
 
 .filter button.active{
+
 background:#e88fa2;
+
 color:white;
+
 }
 
 /* GALLERY */
 
 .gallery{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
 gap:18px;
+
 }
 
 .gallery img{
+
 width:100%;
+
 border-radius:12px;
+
 }
 
 /* TABLE */
@@ -259,36 +341,59 @@ background:#f9eeee;
 }
 
 .price-title{
+
 font-size:24px;
+
 color:#d85d7b;
+
 margin-bottom:12px;
+
 font-weight:700;
+
 }
 
 .price-note{
+
 margin-top:10px;
+
 font-size:14px;
+
 color:#a24c60;
+
 font-style:italic;
+
 }
 
 /* TOS */
 
 .tos-title{
+
 font-size:22px;
+
 color:#d85d7b;
+
 font-weight:700;
+
 margin-bottom:12px;
+
 }
 
 .ai-warning{
+
 margin-top:15px;
+
 padding:14px;
+
 background:#f7c5ce;
+
 border-left:6px solid #d85d7b;
+
 border-radius:10px;
+
 font-weight:700;
+
 color:#a93c56;
+
 }
 
 /* CONTACT */
@@ -298,41 +403,70 @@ text-align:center;
 }
 
 .contact a{
+
 background:#e88fa2;
+
 color:white;
+
 padding:14px 35px;
+
 border-radius:30px;
+
 text-decoration:none;
+
 font-weight:600;
+
 }
 
 /* FOOTER */
 
 footer{
+
 text-align:center;
+
 margin:70px 0 30px;
+
 font-size:13px;
+
 color:#8b6e6e;
+
 }
 
-/* PETAL */
+/* PETALS */
 
 .petal{
+
 position:fixed;
+
 top:-40px;
+
 width:22px;
 height:22px;
+
 background-image:url("petal.png");
+
 background-size:contain;
+
 background-repeat:no-repeat;
+
 pointer-events:none;
+
 animation:fall linear infinite;
+
 z-index:-1;
+
 }
 
 @keyframes fall{
-0%{transform:translateY(-40px) rotate(0deg);}
-100%{transform:translateY(110vh) rotate(360deg);}
+
+0%{
+transform:translateY(-40px) rotate(0deg);
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+
 }
 
 </style>
@@ -340,7 +474,7 @@ z-index:-1;
 
 <body>
 
-<nav id="navbar">
+<nav>
 
 <div class="logo">
 <img src="peach.png">
@@ -348,48 +482,62 @@ Milya Meiira
 </div>
 
 <div class="menu">
+
+<a href="#home">Trang chủ</a>
 <a href="#gallery">Gallery</a>
 <a href="#price">Bảng giá</a>
-<a href="#tos">TOS</a>
+<a href="#tos">Điều khoản</a>
+
 <a href="#contact" class="contact-btn">Liên hệ</a>
+
 </div>
 
 </nav>
 
-<section class="hero">
+<section id="home" class="hero">
 
 <img src="avatar.jpg" class="avatar">
 
 <h1>Milya Meiira</h1>
 
+<div class="subtitle">Digital Artist</div>
+
 <div class="hero-buttons">
 
-<a href="#gallery" class="btn-fill">Xem Gallery</a>
+<a href="#gallery" class="btn-filled">Xem Gallery</a>
 
 <a href="#price" class="btn-outline">Bảng Giá</a>
 
 <a href="#tos" class="btn-outline">TOS</a>
 
-<a href="#contact" class="btn-fill">Liên hệ Commission</a>
+<a href="#contact" class="btn-filled">Liên hệ Commission</a>
 
 </div>
 
 </section>
 
-<h2 class="section-title"><img src="peach.png">Gallery</h2>
+<h2 class="section-title">
+<img src="peach.png">
+Gallery
+</h2>
 
 <section id="gallery" class="section">
 
 <div class="filter">
+
 <button class="active" onclick="showGallery('normal',this)">Normal</button>
 <button onclick="showGallery('chibi',this)">Chibi</button>
+
 </div>
 
 <div class="gallery" id="gallery-container"></div>
 
 </section>
 
-<h2 class="section-title"><img src="peach.png">Bảng giá</h2>
+<h2 class="section-title">
+<img src="peach.png">
+Bảng giá
+</h2>
 
 <section id="price">
 
@@ -437,13 +585,16 @@ Hiện tại mình không nhận full body
 
 </section>
 
-<h2 class="section-title"><img src="peach.png">Điều khoản dịch vụ</h2>
+<h2 class="section-title">
+<img src="peach.png">
+Điều khoản dịch vụ
+</h2>
 
 <section id="tos">
 
 <div class="section">
 
-<div class="tos-title">Khách hàng</div>
+<div class="tos-title">1. Về khách hàng</div>
 
 <p>Gửi đầy đủ brief và note yêu cầu.</p>
 <p>Có thể trì hoãn tiền comm 2 tuần.</p>
@@ -467,8 +618,6 @@ Do not repost or use my art without permission.
 </footer>
 
 <script>
-
-/* gallery */
 
 const normal=["sample1.jpg","sample2.jpg","sample3.jpg","sample4.jpg"]
 const chibi=["chibi1.jpg","chibi2.jpg","chibi3.jpg"]
@@ -494,37 +643,23 @@ document.getElementById("gallery-container").innerHTML=html
 
 showGallery("normal",document.querySelector(".filter button"))
 
-/* navbar opacity */
-
-window.addEventListener("scroll",function(){
-
-let nav=document.querySelector("nav")
-
-if(window.scrollY>50){
-nav.classList.add("scrolled")
-}else{
-nav.classList.remove("scrolled")
-}
-
-})
-
-/* petals */
+/* PETALS */
 
 for(let i=0;i<40;i++){
 
-let petal=document.createElement("div")
+let p=document.createElement("div")
 
-petal.className="petal"
+p.className="petal"
 
-petal.style.left=Math.random()*100+"vw"
+p.style.left=Math.random()*100+"vw"
 
-petal.style.animationDuration=(6+Math.random()*8)+"s"
+p.style.animationDuration=(6+Math.random()*8)+"s"
 
-petal.style.opacity=Math.random()
+p.style.opacity=Math.random()
 
-petal.style.transform=`scale(${0.6+Math.random()})`
+p.style.transform=`scale(${0.6+Math.random()})`
 
-document.body.appendChild(petal)
+document.body.appendChild(p)
 
 }
 
