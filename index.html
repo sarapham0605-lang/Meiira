@@ -59,8 +59,6 @@ color:#6a5050;
 font-weight:600;
 }
 
-/* CONTACT NAV BUTTON */
-
 .contact-nav{
 background:#e88fa2;
 color:white !important;
@@ -88,6 +86,19 @@ transition:.25s;
 .avatar:hover{
 transform:translateY(-8px) scale(1.05);
 box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.artist-name{
+margin-top:15px;
+font-size:28px;
+font-weight:700;
+font-family:'Playfair Display',serif;
+}
+
+.artist-role{
+font-size:14px;
+opacity:0.7;
+margin-top:4px;
 }
 
 /* TITLE */
@@ -223,7 +234,7 @@ color:#d85d7b;
 margin-top:0;
 }
 
-/* WARNING BOX */
+/* WARNING */
 
 .warning{
 background:#e88fa2;
@@ -256,7 +267,7 @@ transform:translateY(-6px);
 box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* IMAGE POPUP */
+/* POPUP */
 
 .popup{
 position:fixed;
@@ -306,12 +317,10 @@ z-index:-1;
 </div>
 
 <div class="menu">
-
 <a href="#gallery">Gallery</a>
 <a href="#price">Bảng giá</a>
 <a href="#tos">TOS</a>
 <a href="#contact" class="contact-nav">Liên hệ</a>
-
 </div>
 
 </nav>
@@ -320,11 +329,18 @@ z-index:-1;
 
 <img src="avatar.jpg" class="avatar" onclick="openImg(this.src)">
 
+<div class="artist-name">Milya Meiira</div>
+<div class="artist-role">Digital artist</div>
+
 </section>
 
 <!-- GALLERY -->
 
-<h2 class="section-title"><img src="peach.png"> Gallery</h2>
+<h2 class="section-title">
+<img src="peach.png">
+Gallery
+<img src="peach.png">
+</h2>
 
 <div class="gallery-box">
 
@@ -339,7 +355,11 @@ z-index:-1;
 
 <!-- PRICE -->
 
-<h2 class="section-title"><img src="peach.png"> Bảng giá</h2>
+<h2 class="section-title">
+<img src="peach.png">
+Bảng giá
+<img src="peach.png">
+</h2>
 
 <div class="price-wrapper">
 
@@ -375,7 +395,11 @@ z-index:-1;
 
 <!-- TOS -->
 
-<h2 class="section-title"><img src="peach.png"> Điều Khoản</h2>
+<h2 class="section-title">
+<img src="peach.png">
+Điều khoản
+<img src="peach.png">
+</h2>
 
 <div class="tos-wrapper">
 
@@ -383,19 +407,17 @@ z-index:-1;
 
 <h3>I. Về Commission</h3>
 
-<p>(Hiện tại mình không nhận full body)</p>
-
 <p>
 Thanh toán full tiền comm sau khi chốt sketch.<br>
 Thêm character: +100% giá gốc.<br>
-Phương thức thanh toán: Bank / Momo (Vui lòng chụp bill lại sau khi thanh toán).<br>
+Phương thức thanh toán: Bank / Momo.<br>
 Deadline từ 1 tuần đến 2 tuần.<br>
-Có nhận rush: 50.000 - 200.000₫.<br>
+Có nhận rush: 50k - 200k.<br>
 Phí sửa miễn phí trước sketch.<br>
 Sửa sau sketch 2 - 5k.<br>
 Không nhận: background khó, người thật, furry, mecha.<br>
 Phí details sẽ được thương lượng.<br>
-Private: thêm 50 cành.
+Private: thêm 50k.
 </p>
 
 </div>
@@ -405,8 +427,8 @@ Private: thêm 50 cành.
 <h3>II. Về Khách Hàng</h3>
 
 <p>
-Gửi chi tiết và đầy đủ ref, note và yêu cầu cho mình.<br>
-Được phép trì hoãn tiền comm 2 tuần, nếu quá 2 tuần mình sẽ cân nhắc giao dịch.
+Gửi chi tiết ref và yêu cầu đầy đủ.<br>
+Được trì hoãn thanh toán tối đa 2 tuần.
 </p>
 
 <div class="warning">
@@ -420,22 +442,18 @@ NGHIÊM CẤM FEED A.I
 <h3>III. Về Artist</h3>
 
 <p>
-Được phép mang tranh comm làm sample trừ khi khách đã trả phí private.<br>
+Có quyền dùng tranh làm sample nếu không trả phí private.<br>
 Có quyền từ chối nếu đơn quá khả năng.<br>
-Comm nếu quá deadline nhưng chưa có sketch sẽ refund 100% tiền cọc.
+Quá deadline nhưng chưa có sketch sẽ refund.
 </p>
 
 </div>
 
 </div>
 
-<!-- CONTACT -->
-
 <div id="contact" class="contact">
 <a href="https://www.facebook.com/">Liên hệ Facebook</a>
 </div>
-
-<!-- POPUP -->
 
 <div class="popup" id="popup" onclick="this.style.display='none'">
 <img id="popup-img">
