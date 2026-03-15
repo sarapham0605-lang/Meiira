@@ -83,6 +83,10 @@ transition:0.25s;
 width:100%;
 }
 
+.menu a:hover::after{
+width:100%;
+}
+
 .contact-nav{
 background:#e88fa2;
 color:white !important;
@@ -283,12 +287,13 @@ padding:14px 36px;
 border-radius:30px;
 text-decoration:none;
 font-weight:600;
-transition:.25s;
+transition:0.25s;
+display:inline-block;
 }
 
 .contact a:hover{
-transform:translateY(-6px);
-box-shadow:0 8px 18px rgba(0,0,0,0.15);
+transform:translateY(-6px) scale(1.05);
+box-shadow:0 10px 20px rgba(0,0,0,0.18);
 }
 
 /* POPUP */
@@ -474,7 +479,17 @@ Quá deadline nhưng chưa có sketch sẽ refund.
 </div>
 
 <div id="contact" class="contact">
+
 <a href="https://www.facebook.com/">Liên hệ Facebook</a>
+
+<p class="footer-note">
+Please read the Terms of Service carefully before commissioning.
+</p>
+
+<p class="footer-note">
+Do not repost or use my art without permission.
+</p>
+
 </div>
 
 <div class="popup" id="popup" onclick="this.style.display='none'">
