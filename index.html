@@ -35,41 +35,10 @@ top:0;
 width:100%;
 display:flex;
 align-items:center;
-justify-content:space-between;
 padding:14px 8%;
 background:rgba(255,255,255,0.85);
 backdrop-filter:blur(8px);
 z-index:999;
-
-}
-
-.logo{
-
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:700;
-font-size:20px;
-
-}
-
-.logo img{
-width:28px;
-}
-
-.menu{
-
-display:flex;
-gap:25px;
-align-items:center;
-
-}
-
-.menu a{
-
-text-decoration:none;
-color:#6a5050;
-font-weight:600;
 
 }
 
@@ -79,6 +48,34 @@ background:#e88fa2;
 color:white;
 padding:10px 24px;
 border-radius:25px;
+text-decoration:none;
+font-weight:600;
+margin-right:40px;
+
+}
+
+.menu{
+
+display:flex;
+gap:30px;
+margin-left:auto;
+
+}
+
+.menu a{
+
+text-decoration:none;
+color:#6a5050;
+font-weight:600;
+transition:.25s;
+
+}
+
+.menu a:hover{
+
+color:#d85d7b;
+transform:translateY(-3px);
+text-decoration:underline;
 
 }
 
@@ -99,13 +96,14 @@ border-radius:50%;
 border:6px solid #e8a3b0;
 object-fit:cover;
 transition:.3s;
+cursor:pointer;
 
 }
 
 .avatar:hover{
 
-transform:translateY(-8px) scale(1.05);
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
 
 }
 
@@ -237,12 +235,39 @@ gap:18px;
 width:100%;
 border-radius:12px;
 transition:.3s;
+cursor:pointer;
 
 }
 
 .gallery img:hover{
 
-transform:scale(1.05);
+transform:translateY(-8px) scale(1.05);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+
+}
+
+/* IMAGE POPUP */
+
+.popup{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:2000;
+
+}
+
+.popup img{
+
+max-width:80%;
+max-height:80%;
+border-radius:12px;
 
 }
 
@@ -343,55 +368,6 @@ transform:translateY(-5px);
 
 }
 
-.tos-card h3{
-
-color:#d85d7b;
-margin-top:0;
-
-}
-
-.tos-card ul{
-
-padding-left:20px;
-
-}
-
-.tos-card li{
-
-margin:8px 0;
-
-}
-
-/* CONTACT */
-
-.contact{
-
-text-align:center;
-
-}
-
-.contact a{
-
-background:#e88fa2;
-color:white;
-padding:14px 34px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-
-}
-
-/* FOOTER */
-
-footer{
-
-text-align:center;
-margin:70px 0 30px;
-font-size:13px;
-color:#8b6e6e;
-
-}
-
 /* PETALS */
 
 .petal{
@@ -421,10 +397,7 @@ z-index:-1;
 
 <nav>
 
-<div class="logo">
-<img src="peach.png">
-Milya Meiira
-</div>
+<a href="#contact" class="contact-btn">Liên hệ</a>
 
 <div class="menu">
 
@@ -434,32 +407,17 @@ Milya Meiira
 
 </div>
 
-<a href="#contact" class="contact-btn">Liên hệ</a>
-
 </nav>
 
 <section class="hero">
 
-<img src="avatar.jpg" class="avatar">
+<img src="avatar.jpg" class="avatar" onclick="openImg(this.src)">
 
 <h1>Milya Meiira</h1>
 
-<div class="quick">
-
-<a href="#gallery" class="btn btn-main">Xem Gallery</a>
-<a href="#price" class="btn btn-outline">Bảng giá</a>
-<a href="#tos" class="btn btn-outline">TOS</a>
-<a href="#contact" class="btn btn-main">Liên hệ Commission</a>
-
-</div>
-
 </section>
 
-<!-- GALLERY -->
-
-<h2 class="section-title">
-<img src="peach.png"> Gallery
-</h2>
+<h2 class="section-title">Gallery</h2>
 
 <section id="gallery" class="section">
 
@@ -474,172 +432,29 @@ Milya Meiira
 
 </section>
 
-<!-- PRICE -->
-
-<h2 class="section-title">
-<img src="peach.png"> Bảng giá
-</h2>
-
-<section id="price" class="section">
-
-<div class="price-grid">
-
-<div class="price-box">
-
-<h3>Normal</h3>
-
-<table>
-
-<tr>
-<th>Loại</th>
-<th>Sketch</th>
-<th>Sketch Color</th>
-<th>Full</th>
-</tr>
-
-<tr>
-<td>Headshot</td>
-<td>50k</td>
-<td>80k</td>
-<td>100k</td>
-</tr>
-
-<tr>
-<td>Chest-up</td>
-<td>80k</td>
-<td>100k</td>
-<td>135k</td>
-</tr>
-
-<tr>
-<td>Half-body</td>
-<td>110k</td>
-<td>150k</td>
-<td>200k</td>
-</tr>
-
-</table>
-
-<p class="note">(Hiện tại mình không nhận full body)</p>
-
+<div class="popup" id="popup" onclick="closeImg()">
+<img id="popup-img">
 </div>
-
-<div class="price-box">
-
-<h3>Chibi</h3>
-
-<table>
-
-<tr>
-<th>Loại</th>
-<th>Sketch</th>
-<th>Full</th>
-</tr>
-
-<tr>
-<td>Head</td>
-<td>30k</td>
-<td>50k</td>
-</tr>
-
-<tr>
-<td>Half</td>
-<td>50k</td>
-<td>80k</td>
-</tr>
-
-<tr>
-<td>Full</td>
-<td>80k</td>
-<td>120k</td>
-</tr>
-
-</table>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TOS -->
-
-<h2 class="section-title">
-<img src="peach.png"> Điều Khoản Dịch Vụ
-</h2>
-
-<section id="tos" class="tos-wrapper">
-
-<div class="tos-card">
-
-<h3>Ⅰ. Về Commission</h3>
-
-<ul>
-
-<li>Thanh toán full tiền commission sau khi chốt sketch.</li>
-<li>Thêm character: +100% giá gốc.</li>
-<li>Phương thức thanh toán: Bank / Momo.</li>
-<li>Deadline từ 1 – 2 tuần.</li>
-<li>Có nhận rush: 50k – 200k.</li>
-<li>Sửa miễn phí trước khi chốt sketch.</li>
-<li>Sửa sau sketch / final: 2k – 5k.</li>
-<li>Không nhận: background khó, furry, mecha.</li>
-<li>Phí detail sẽ thương lượng.</li>
-<li>Private: thêm 50 cành.</li>
-
-</ul>
-
-</div>
-
-<div class="tos-card">
-
-<h3>Ⅱ. Về Khách Hàng</h3>
-
-<ul>
-
-<li>Gửi đầy đủ reference.</li>
-<li>Không thúc ép artist.</li>
-<li>Không chỉnh sửa tranh khi chưa cho phép.</li>
-<li>Không feed tranh cho AI.</li>
-<li>Đăng lại phải credit artist.</li>
-
-</ul>
-
-</div>
-
-<div class="tos-card">
-
-<h3>Ⅲ. Về Artist</h3>
-
-<ul>
-
-<li>Artist có quyền từ chối commission.</li>
-<li>Artist gửi WIP: sketch → line → final.</li>
-<li>Artist có quyền đăng portfolio.</li>
-<li>Cố gắng hoàn thành đúng deadline.</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<section id="contact" class="section contact">
-
-<a href="https://www.facebook.com/kemdao.peach/">Liên hệ Facebook</a>
-
-</section>
-
-<footer>
-
-Do not repost my art without permission
-
-</footer>
 
 <script>
 
-const normal=["sample1.jpg","sample2.jpg","sample3.jpg"]
-const chibi=["chibi1.jpg","chibi2.jpg","chibi3.jpg"]
+const normal=[
+"normal1.jpg",
+"normal2.jpg",
+"normal3.jpg",
+"normal4.jpg",
+"normal5.jpg",
+"normal6.jpg"
+]
+
+const chibi=[
+"chibi1.jpg",
+"chibi2.jpg",
+"chibi3.jpg",
+"chibi4.jpg",
+"chibi5.jpg",
+"chibi6.jpg"
+]
 
 function showGallery(type,btn){
 
@@ -653,7 +468,9 @@ let list=type==="normal"?normal:chibi
 let html=""
 
 list.forEach(img=>{
-html+=`<img src="${img}">`
+
+html+=`<img src="${img}" onclick="openImg('${img}')">`
+
 })
 
 document.getElementById("gallery-container").innerHTML=html
@@ -661,6 +478,19 @@ document.getElementById("gallery-container").innerHTML=html
 }
 
 showGallery("normal",document.querySelector(".filter button"))
+
+function openImg(src){
+
+document.getElementById("popup").style.display="flex"
+document.getElementById("popup-img").src=src
+
+}
+
+function closeImg(){
+
+document.getElementById("popup").style.display="none"
+
+}
 
 for(let i=0;i<40;i++){
 
