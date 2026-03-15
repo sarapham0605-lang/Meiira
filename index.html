@@ -7,21 +7,23 @@
 
 <title>Milya Meiira Commission</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
 font-family:'Be Vietnam Pro',sans-serif;
-background:#f6eeee;
-color:#5b4545;
+background:#f7eeee;
+color:#5b4444;
 overflow-x:hidden;
+position:relative;
 }
 
 /* NAVBAR */
 
 nav{
+
 position:fixed;
 top:0;
 left:0;
@@ -31,53 +33,62 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-padding:18px 8%;
+padding:16px 8%;
+
 background:white;
 
-z-index:999;
+z-index:1000;
+
 transition:.3s;
+
 }
 
 nav.scrolled{
+
 background:rgba(255,255,255,0.7);
-backdrop-filter:blur(8px);
+backdrop-filter:blur(10px);
+
 }
 
 /* LOGO */
 
 .logo{
+
 display:flex;
 align-items:center;
 gap:10px;
 font-weight:700;
 font-size:20px;
+
 }
 
 .logo img{
-width:30px;
+width:28px;
 }
 
 /* MENU */
 
 .menu{
 display:flex;
-align-items:center;
 gap:28px;
+align-items:center;
 }
 
 .menu a{
+
 text-decoration:none;
-color:#6d5454;
+color:#6b5252;
 font-weight:600;
 position:relative;
-padding-bottom:6px;
+padding-bottom:5px;
+
 }
 
-/* underline hover */
-
 .menu a::after{
+
 content:"";
 position:absolute;
+
 bottom:0;
 left:0;
 
@@ -87,6 +98,7 @@ height:2px;
 background:#e07a8e;
 
 transition:.25s;
+
 }
 
 .menu a:hover::after{
@@ -104,10 +116,10 @@ padding:10px 24px;
 
 border-radius:30px;
 
-position:relative;
-top:-3px;
-
 font-weight:600;
+
+position:relative;
+top:-2px;
 
 }
 
@@ -118,30 +130,51 @@ display:none;
 /* HERO */
 
 .hero{
+
 padding-top:120px;
 text-align:center;
+
 }
 
+/* AVATAR */
+
 .avatar{
+
 width:170px;
 height:170px;
+
 border-radius:50%;
+
 border:6px solid #e8a3b0;
+
 object-fit:cover;
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+.avatar:hover{
+
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+
 }
 
 .hero h1{
-font-size:46px;
-margin:15px 0 5px;
+font-size:44px;
+margin:14px 0 6px;
 }
 
 .subtitle{
-color:#9c7575;
+color:#9c7777;
 }
 
 /* TITLES */
 
 .section-title{
+
 display:flex;
 align-items:center;
 justify-content:center;
@@ -151,15 +184,17 @@ font-family:'Playfair Display',serif;
 font-size:40px;
 
 margin-top:80px;
+
 }
 
 .section-title img{
 height:38px;
 }
 
-/* SECTION */
+/* SECTION BOX */
 
 .section{
+
 background:#f3e2e2;
 
 border-radius:20px;
@@ -167,24 +202,28 @@ border-radius:20px;
 padding:40px;
 
 margin:40px auto;
+
 max-width:950px;
 
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 
 transition:.3s;
+
 }
 
 .section:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 /* FILTER */
 
 .filter{
+
 display:flex;
 justify-content:center;
 gap:14px;
 margin-bottom:25px;
+
 }
 
 .filter button{
@@ -211,11 +250,13 @@ color:white;
 /* GALLERY */
 
 .gallery{
+
 display:grid;
 
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 
 gap:18px;
+
 }
 
 .gallery img{
@@ -245,11 +286,18 @@ tr:nth-child(even){
 background:#f9eeee;
 }
 
-.price-title{
-font-size:24px;
-color:#d85d7b;
-margin-bottom:12px;
-font-weight:700;
+/* NOTE NORMAL */
+
+.normal-note{
+
+margin-top:10px;
+
+font-size:14px;
+
+color:#8a6b6b;
+
+text-align:center;
+
 }
 
 /* TOS */
@@ -262,7 +310,8 @@ margin-bottom:12px;
 }
 
 .ai-warning{
-margin-top:15px;
+
+margin-top:14px;
 
 padding:14px;
 
@@ -273,13 +322,15 @@ border-left:6px solid #d85d7b;
 border-radius:10px;
 
 font-weight:700;
-color:#a93c56;
+
 }
 
 /* CONTACT */
 
 .contact{
+
 text-align:center;
+
 }
 
 .contact a{
@@ -288,7 +339,7 @@ background:#e88fa2;
 
 color:white;
 
-padding:14px 35px;
+padding:14px 34px;
 
 border-radius:30px;
 
@@ -301,43 +352,57 @@ font-weight:600;
 /* FOOTER */
 
 footer{
+
 text-align:center;
+
 margin:70px 0 30px;
+
 font-size:13px;
+
 color:#8b6e6e;
+
 }
 
-/* SAKURA */
+/* SAKURA PETAL */
 
-.sakura{
+.petal{
 
 position:fixed;
 
-top:-10px;
+top:-40px;
 
-font-size:18px;
+width:22px;
+height:22px;
 
-animation:fall linear infinite;
+background-image:url("petal.png");
+
+background-size:contain;
+
+background-repeat:no-repeat;
 
 pointer-events:none;
 
+animation:fall linear infinite;
+
 z-index:-1;
+
 }
+
+/* FALL ANIMATION */
 
 @keyframes fall{
 
 0%{
-transform:translateY(-10px);
+transform:translateY(-40px) rotate(0deg);
 }
 
 100%{
-transform:translateY(110vh);
+transform:translateY(110vh) rotate(360deg);
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
@@ -399,8 +464,6 @@ Bảng giá
 
 <div class="section">
 
-<div class="price-title">1. Normal</div>
-
 <table>
 
 <tr>
@@ -433,43 +496,9 @@ Bảng giá
 
 </table>
 
+<div class="normal-note">
+(Hiện tại mình không nhận full body)
 </div>
-
-<div class="section">
-
-<div class="price-title">2. Chibi</div>
-
-<table>
-
-<tr>
-<th>Loại</th>
-<th>Sketch</th>
-<th>Sketch Color</th>
-<th>Full</th>
-</tr>
-
-<tr>
-<td>Headshot</td>
-<td>30.000₫</td>
-<td>50.000₫</td>
-<td>80.000₫</td>
-</tr>
-
-<tr>
-<td>Half-body</td>
-<td>40.000₫</td>
-<td>60.000₫</td>
-<td>90.000₫</td>
-</tr>
-
-<tr>
-<td>Full-body</td>
-<td>50.000₫</td>
-<td>80.000₫</td>
-<td>110.000₫</td>
-</tr>
-
-</table>
 
 </div>
 
@@ -484,9 +513,9 @@ Bảng giá
 
 <div class="section">
 
-<div class="tos-title">1. Về khách hàng</div>
+<div class="tos-title">Về khách hàng</div>
 
-<p>Gửi đầy đủ brief và note yêu cầu.</p>
+<p>Gửi đầy đủ brief và yêu cầu.</p>
 <p>Có thể trì hoãn tiền comm 2 tuần.</p>
 
 <div class="ai-warning">
@@ -495,23 +524,11 @@ TUYỆT ĐỐI KHÔNG FEED CHO A.I
 
 </div>
 
-<div class="section">
-
-<div class="tos-title">2. Về artist</div>
-
-<p>Được phép dùng tranh làm sample trừ khi khách trả phí private.</p>
-
-<p>Có quyền từ chối nếu đơn quá khả năng.</p>
-
-<p>Nếu quá deadline mà chưa có sketch → refund 100% tiền cọc.</p>
-
-</div>
-
 </section>
 
 <section id="contact" class="section contact">
 
-<a href="https://www.facebook.com/kemdao.peach/">Liên hệ qua Facebook</a>
+<a href="https://facebook.com">Liên hệ Facebook</a>
 
 </section>
 
@@ -527,13 +544,11 @@ Do not repost or use my art without permission.
 
 const normal=[
 "sample1.jpg","sample2.jpg","sample3.jpg",
-"sample4.jpg","sample5.jpg","sample6.jpg",
-"sample7.jpg","sample8.jpg","sample9.jpg"
+"sample4.jpg","sample5.jpg","sample6.jpg"
 ]
 
 const chibi=[
-"chibi1.jpg","chibi2.jpg","chibi3.jpg",
-"chibi4.jpg","chibi5.jpg","chibi6.jpg"
+"chibi1.jpg","chibi2.jpg","chibi3.jpg"
 ]
 
 function showGallery(type,btn){
@@ -557,7 +572,7 @@ document.getElementById("gallery-container").innerHTML=html
 
 showGallery("normal",document.querySelector(".filter button"))
 
-/* NAVBAR OPACITY */
+/* NAVBAR SCROLL */
 
 window.addEventListener("scroll",function(){
 
@@ -571,21 +586,23 @@ nav.classList.remove("scrolled")
 
 })
 
-/* SAKURA */
+/* PETAL FALL */
 
-for(let i=0;i<35;i++){
+for(let i=0;i<40;i++){
 
-let sakura=document.createElement("div")
+let petal=document.createElement("div")
 
-sakura.className="sakura"
+petal.className="petal"
 
-sakura.innerHTML="🌸"
+petal.style.left=Math.random()*100+"vw"
 
-sakura.style.left=Math.random()*100+"vw"
+petal.style.animationDuration=(6+Math.random()*8)+"s"
 
-sakura.style.animationDuration=(5+Math.random()*7)+"s"
+petal.style.opacity=Math.random()
 
-document.body.appendChild(sakura)
+petal.style.transform=`scale(${0.5+Math.random()})`
+
+document.body.appendChild(petal)
 
 }
 
