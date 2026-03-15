@@ -4,7 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>Milya Meiira Commission</title>
 
@@ -17,10 +17,13 @@ scroll-behavior:smooth;
 }
 
 body{
+
 margin:0;
 font-family:'Be Vietnam Pro',sans-serif;
 background:#f6eeee;
 color:#5b4545;
+overflow-x:hidden;
+
 }
 
 /* NAVBAR */
@@ -31,22 +34,23 @@ position:fixed;
 top:0;
 width:100%;
 display:flex;
-justify-content:space-between;
 align-items:center;
-
-padding:15px 120px;
-
-background:rgba(255,255,255,0.8);
+justify-content:space-between;
+padding:14px 8%;
+background:rgba(255,255,255,0.85);
 backdrop-filter:blur(8px);
+z-index:999;
 
 }
 
 .logo{
+
 display:flex;
 align-items:center;
 gap:10px;
 font-weight:700;
 font-size:20px;
+
 }
 
 .logo img{
@@ -54,22 +58,25 @@ width:28px;
 }
 
 .menu{
+
 display:flex;
-gap:28px;
+gap:25px;
 align-items:center;
+
 }
 
 .menu a{
+
 text-decoration:none;
 color:#6a5050;
 font-weight:600;
+
 }
 
 .contact-btn{
 
 background:#e88fa2;
 color:white;
-
 padding:10px 24px;
 border-radius:25px;
 
@@ -88,23 +95,25 @@ text-align:center;
 
 width:170px;
 height:170px;
-
 border-radius:50%;
 border:6px solid #e8a3b0;
-
 object-fit:cover;
-
 transition:.3s;
 
 }
 
 .avatar:hover{
+
 transform:translateY(-8px) scale(1.05);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+
 }
 
 .hero h1{
+
 font-size:44px;
-margin:15px 0 5px;
+margin:15px 0;
+
 }
 
 /* BUTTON */
@@ -114,7 +123,6 @@ margin:15px 0 5px;
 display:flex;
 justify-content:center;
 gap:15px;
-
 margin-top:20px;
 flex-wrap:wrap;
 
@@ -124,26 +132,30 @@ flex-wrap:wrap;
 
 padding:12px 26px;
 border-radius:25px;
-
 font-weight:600;
 text-decoration:none;
-
 transition:.25s;
 
 }
 
 .btn-main{
+
 background:#e88fa2;
 color:white;
+
 }
 
 .btn-outline{
+
 border:2px solid #e88fa2;
 color:#e88fa2;
+
 }
 
 .btn:hover{
+
 transform:translateY(-4px);
+
 }
 
 /* TITLE */
@@ -153,32 +165,34 @@ transform:translateY(-4px);
 display:flex;
 align-items:center;
 justify-content:center;
-
 gap:10px;
-
 font-size:36px;
 font-family:'Playfair Display',serif;
-
-margin-top:80px;
+margin-top:90px;
 
 }
 
 .section-title img{
-height:32px;
+height:30px;
 }
 
-/* SECTION */
+/* BOX */
 
 .section{
 
 background:#f3e2e2;
-
 border-radius:20px;
-
 padding:40px;
 margin:40px auto;
-
 max-width:950px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:.25s;
+
+}
+
+.section:hover{
+
+transform:translateY(-6px);
 
 }
 
@@ -196,13 +210,9 @@ margin-bottom:20px;
 .filter button{
 
 padding:10px 24px;
-
 border-radius:25px;
-
 border:2px solid #e88fa2;
-
 background:none;
-
 cursor:pointer;
 
 }
@@ -218,7 +228,6 @@ color:white;
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-
 gap:18px;
 
 }
@@ -227,17 +236,53 @@ gap:18px;
 
 width:100%;
 border-radius:12px;
+transition:.3s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
 
 }
 
 /* PRICE */
 
+.price-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+
+}
+
+.price-box{
+
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+transition:.25s;
+
+}
+
+.price-box:hover{
+
+transform:translateY(-6px);
+
+}
+
+.price-box h3{
+
+margin-top:0;
+color:#d85d7b;
+
+}
+
 table{
 
 width:100%;
 border-collapse:collapse;
-
-margin-bottom:25px;
 
 }
 
@@ -245,21 +290,20 @@ th{
 
 background:#e88fa2;
 color:white;
-
-padding:14px;
+padding:12px;
 
 }
 
 td{
 
-padding:14px;
+padding:12px;
 text-align:center;
 
 }
 
 tr:nth-child(even){
 
-background:#f9eeee;
+background:#f7eeee;
 
 }
 
@@ -267,8 +311,7 @@ background:#f9eeee;
 
 color:#c05773;
 font-weight:600;
-
-margin-top:5px;
+margin-top:10px;
 
 }
 
@@ -277,12 +320,9 @@ margin-top:5px;
 .tos-wrapper{
 
 max-width:950px;
-
 margin:40px auto;
-
 display:flex;
 flex-direction:column;
-
 gap:25px;
 
 }
@@ -290,21 +330,23 @@ gap:25px;
 .tos-card{
 
 background:#f3e2e2;
-
 border-radius:20px;
-
 padding:30px;
-
 border:1px solid #ebcaca;
+transition:.25s;
+
+}
+
+.tos-card:hover{
+
+transform:translateY(-5px);
 
 }
 
 .tos-card h3{
 
 color:#d85d7b;
-
 margin-top:0;
-margin-bottom:15px;
 
 }
 
@@ -318,26 +360,22 @@ padding-left:20px;
 
 margin:8px 0;
 
-line-height:1.5;
-
 }
 
 /* CONTACT */
 
 .contact{
+
 text-align:center;
+
 }
 
 .contact a{
 
 background:#e88fa2;
-
 color:white;
-
 padding:14px 34px;
-
 border-radius:30px;
-
 text-decoration:none;
 font-weight:600;
 
@@ -348,17 +386,35 @@ font-weight:600;
 footer{
 
 text-align:center;
-
 margin:70px 0 30px;
-
 font-size:13px;
-
 color:#8b6e6e;
 
 }
 
-</style>
+/* PETALS */
 
+.petal{
+
+position:fixed;
+top:-40px;
+width:20px;
+height:20px;
+background:url("petal.png") no-repeat center;
+background-size:contain;
+animation:fall linear infinite;
+z-index:-1;
+
+}
+
+@keyframes fall{
+
+0%{transform:translateY(-10vh) rotate(0deg);}
+100%{transform:translateY(110vh) rotate(360deg);}
+
+}
+
+</style>
 </head>
 
 <body>
@@ -376,9 +432,9 @@ Milya Meiira
 <a href="#price">Bảng giá</a>
 <a href="#tos">TOS</a>
 
-<a href="#contact" class="contact-btn">Liên hệ</a>
-
 </div>
+
+<a href="#contact" class="contact-btn">Liên hệ</a>
 
 </nav>
 
@@ -426,6 +482,10 @@ Milya Meiira
 
 <section id="price" class="section">
 
+<div class="price-grid">
+
+<div class="price-box">
+
 <h3>Normal</h3>
 
 <table>
@@ -462,6 +522,9 @@ Milya Meiira
 
 <p class="note">(Hiện tại mình không nhận full body)</p>
 
+</div>
+
+<div class="price-box">
 
 <h3>Chibi</h3>
 
@@ -475,14 +538,14 @@ Milya Meiira
 
 <tr>
 <td>Head</td>
-<td>40k</td>
-<td>70k</td>
+<td>30k</td>
+<td>50k</td>
 </tr>
 
 <tr>
 <td>Half</td>
-<td>60k</td>
-<td>90k</td>
+<td>50k</td>
+<td>80k</td>
 </tr>
 
 <tr>
@@ -492,6 +555,10 @@ Milya Meiira
 </tr>
 
 </table>
+
+</div>
+
+</div>
 
 </section>
 
@@ -516,7 +583,7 @@ Milya Meiira
 <li>Có nhận rush: 50k – 200k.</li>
 <li>Sửa miễn phí trước khi chốt sketch.</li>
 <li>Sửa sau sketch / final: 2k – 5k.</li>
-<li>Không nhận: background khó, người già, người thật, furry, mecha.</li>
+<li>Không nhận: background khó, furry, mecha.</li>
 <li>Phí detail sẽ thương lượng.</li>
 <li>Private: thêm 50 cành.</li>
 
@@ -534,7 +601,7 @@ Milya Meiira
 <li>Không thúc ép artist.</li>
 <li>Không chỉnh sửa tranh khi chưa cho phép.</li>
 <li>Không feed tranh cho AI.</li>
-<li>Đăng lại phải credit.</li>
+<li>Đăng lại phải credit artist.</li>
 
 </ul>
 
@@ -549,6 +616,7 @@ Milya Meiira
 <li>Artist có quyền từ chối commission.</li>
 <li>Artist gửi WIP: sketch → line → final.</li>
 <li>Artist có quyền đăng portfolio.</li>
+<li>Cố gắng hoàn thành đúng deadline.</li>
 
 </ul>
 
@@ -593,6 +661,18 @@ document.getElementById("gallery-container").innerHTML=html
 }
 
 showGallery("normal",document.querySelector(".filter button"))
+
+for(let i=0;i<40;i++){
+
+let petal=document.createElement("div")
+petal.className="petal"
+
+petal.style.left=Math.random()*100+"vw"
+petal.style.animationDuration=(6+Math.random()*8)+"s"
+
+document.body.appendChild(petal)
+
+}
 
 </script>
 
