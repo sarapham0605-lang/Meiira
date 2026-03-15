@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
 
 <meta charset="UTF-8">
@@ -78,6 +77,10 @@ width:0%;
 height:2px;
 background:#d85d7b;
 transition:0.25s;
+}
+
+.menu a:hover::after{
+width:100%;
 }
 
 .menu a:hover::after{
@@ -330,14 +333,11 @@ z-index:-1;
 0%{transform:translateY(-10vh) rotate(0);}
 100%{transform:translateY(110vh) rotate(360deg);}
 }
-
 .footer-note{
 margin-top:18px;
 font-size:14px;
 opacity:0.75;
-}
-
-@media (max-width:768px){
+}@media (max-width:768px){
 
 }
 
@@ -370,7 +370,7 @@ opacity:0.75;
 
 </section>
 
-<h2 id="gallery" class="section-title">
+<h2 class="section-title">
 <img src="peach.png">
 Gallery
 <img src="peach.png">
@@ -387,7 +387,7 @@ Gallery
 
 </div>
 
-<h2 id="price" class="section-title">
+<h2 class="section-title">
 <img src="peach.png">
 Bảng giá
 <img src="peach.png">
@@ -425,8 +425,118 @@ Bảng giá
 
 </div>
 
-<h2 id="tos" class="section-title">
+<h2 class="section-title">
 <img src="peach.png">
 Điều khoản
 <img src="peach.png">
 </h2>
+
+<div class="tos-wrapper">
+
+<div class="tos-card">
+
+<h3>I. Về Commission</h3>
+
+<p>
+Thanh toán full tiền comm sau khi chốt sketch.<br>
+Thêm character: +100% giá gốc.<br>
+Phương thức thanh toán: Bank / Momo.<br>
+Deadline từ 1 tuần đến 2 tuần.<br>
+Có nhận rush: 50k - 200k.<br>
+Phí sửa miễn phí trước sketch.<br>
+Sửa sau sketch 2 - 5k.<br>
+Không nhận: background khó, người thật, furry, mecha.<br>
+Phí details sẽ được thương lượng.<br>
+Private: thêm 50k.
+</p>
+
+</div>
+
+<div class="tos-card">
+
+<h3>II. Về Khách Hàng</h3>
+
+<p>
+Gửi chi tiết ref và yêu cầu đầy đủ.<br>
+Được trì hoãn thanh toán tối đa 2 tuần.
+</p>
+
+<div class="warning">
+NGHIÊM CẤM FEED A.I
+</div>
+
+</div>
+
+<div class="tos-card">
+
+<h3>III. Về Artist</h3>
+
+<p>
+Có quyền dùng tranh làm sample nếu không trả phí private.<br>
+Có quyền từ chối nếu đơn quá khả năng.<br>
+Quá deadline nhưng chưa có sketch sẽ refund.
+</p>
+
+</div>
+
+</div>
+
+<div id="contact" class="contact">
+
+<a href="https://www.facebook.com/">Liên hệ Facebook</a>
+
+<p class="footer-note">
+Please read the Terms of Service carefully before commissioning.
+</p>
+
+<p class="footer-note">
+Do not repost or use my art without permission.
+</p>
+
+</div>
+
+<div class="popup" id="popup" onclick="this.style.display='none'">
+<img id="popup-img">
+</div>
+
+<script>
+
+const normal=["n1.jpg","n2.jpg","n3.jpg","n4.jpg","n5.jpg","n6.jpg"]
+const chibi=["c1.jpg","c2.jpg","c3.jpg","c4.jpg","c5.jpg","c6.jpg"]
+
+function showGallery(type,btn){
+
+document.querySelectorAll(".filter button").forEach(b=>b.classList.remove("active"))
+btn.classList.add("active")
+
+let list= type==="normal"?normal:chibi
+
+let html=""
+
+list.forEach(img=>{
+html+=`<img src="${img}" onclick="openImg('${img}')">`
+})
+
+document.getElementById("gallery").innerHTML=html
+
+}
+
+function openImg(src){
+document.getElementById("popup-img").src=src
+document.getElementById("popup").style.display="flex"
+}
+
+showGallery("normal",document.querySelector(".filter button"))
+
+for(let i=0;i<35;i++){
+let p=document.createElement("div")
+p.className="petal"
+p.style.left=Math.random()*100+"vw"
+p.style.animationDuration=(6+Math.random()*8)+"s"
+document.body.appendChild(p)
+}
+
+</script>
+
+</body>
+</html>
