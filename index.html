@@ -12,9 +12,7 @@
 
 <style>
 
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
 margin:0;
@@ -22,6 +20,24 @@ font-family:'Be Vietnam Pro',sans-serif;
 background:#f6eeee;
 color:#5b4545;
 overflow-x:hidden;
+}
+
+/* PETAL */
+
+.petal{
+position:fixed;
+top:-50px;
+width:22px;
+height:22px;
+background:url("petal.png") center/contain no-repeat;
+pointer-events:none;
+animation:fall linear infinite;
+z-index:-1;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10vh) rotate(0deg);}
+100%{transform:translateY(110vh) rotate(360deg);}
 }
 
 /* NAVBAR */
@@ -34,30 +50,29 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 6%;
-background:rgba(255,255,255,0.85);
+padding:15px 8%;
+background:rgba(255,255,255,0.8);
 backdrop-filter:blur(8px);
-z-index:100;
+z-index:999;
 
 }
 
 .logo{
+
 display:flex;
 align-items:center;
 gap:10px;
 font-weight:700;
 font-size:20px;
+
 }
 
-.logo img{
-width:28px;
-}
+.logo img{width:28px;}
 
 .menu{
 display:flex;
 gap:25px;
 align-items:center;
-margin-right:30px;
 }
 
 .menu a{
@@ -70,8 +85,9 @@ font-weight:600;
 
 background:#e88fa2;
 color:white;
-padding:10px 22px;
+padding:10px 20px;
 border-radius:25px;
+margin-right:30px;
 
 }
 
@@ -90,35 +106,36 @@ border-radius:50%;
 border:6px solid #e8a3b0;
 object-fit:cover;
 transition:.3s;
+cursor:pointer;
 
 }
 
 .avatar:hover{
-transform:translateY(-10px) scale(1.05);
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+transform:translateY(-8px) scale(1.05);
 }
 
 .hero h1{
-font-size:45px;
-margin:15px 0 5px;
+font-size:44px;
+margin:15px 0;
 }
 
-/* BUTTON */
+/* BUTTONS */
 
 .quick{
 display:flex;
 justify-content:center;
 gap:15px;
-margin-top:20px;
 flex-wrap:wrap;
 }
 
 .btn{
+
 padding:12px 26px;
 border-radius:25px;
 font-weight:600;
 text-decoration:none;
 transition:.25s;
+
 }
 
 .btn-main{
@@ -132,44 +149,62 @@ color:#e88fa2;
 }
 
 .btn:hover{
-transform:translateY(-5px);
+transform:translateY(-4px);
 }
 
-/* TITLE */
+/* TITLES */
 
 .section-title{
 
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 gap:10px;
-font-size:38px;
+font-size:36px;
 font-family:'Playfair Display',serif;
 margin-top:80px;
 
 }
 
-.section-title img{
-height:32px;
-}
-
-/* SECTION BOX */
-
-.section{
-
-background:#f3e2e2;
-border-radius:20px;
-padding:40px;
-margin:40px auto;
-max-width:950px;
-box-shadow:0 8px 20px rgba(0,0,0,0.07);
-
-}
+.section-title img{height:32px;}
 
 /* GALLERY */
 
+.gallery-filter{
+
+display:flex;
+justify-content:center;
+gap:15px;
+margin:25px 0;
+
+}
+
+.gallery-filter button{
+
+padding:10px 22px;
+border-radius:25px;
+border:2px solid #e88fa2;
+background:none;
+cursor:pointer;
+transition:.2s;
+
+}
+
+.gallery-filter button.active{
+
+background:#e88fa2;
+color:white;
+
+}
+
+.gallery-filter button:hover{
+transform:translateY(-3px);
+}
+
 .gallery{
 
+max-width:950px;
+margin:auto;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:18px;
@@ -187,47 +222,34 @@ transition:.25s;
 
 .gallery img:hover{
 
-transform:translateY(-8px) scale(1.03);
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
+transform:translateY(-6px) scale(1.03);
 
-}
-
-/* IMAGE POPUP */
-
-.popup{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-display:none;
-justify-content:center;
-align-items:center;
-z-index:999;
-
-}
-
-.popup img{
-max-width:80%;
-max-height:80%;
-border-radius:10px;
 }
 
 /* PRICE */
 
+.price-wrapper{
+
+max-width:950px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+
+}
+
 .price-box{
 
-margin-bottom:30px;
+background:#f3e2e2;
+padding:30px;
+border-radius:20px;
 transition:.25s;
 
 }
 
 .price-box:hover{
 
-transform:translateY(-6px);
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
+transform:translateY(-8px);
 
 }
 
@@ -242,13 +264,13 @@ th{
 
 background:#e88fa2;
 color:white;
-padding:14px;
+padding:12px;
 
 }
 
 td{
 
-padding:14px;
+padding:12px;
 text-align:center;
 
 }
@@ -257,58 +279,11 @@ tr:nth-child(even){
 background:#f9eeee;
 }
 
-.note{
-
-color:#c05773;
-font-weight:600;
-margin-top:10px;
-
-}
-
-/* TOS */
-
-.tos-wrapper{
-
-max-width:950px;
-margin:40px auto;
-display:flex;
-flex-direction:column;
-gap:25px;
-
-}
-
-.tos-card{
-
-background:#f3e2e2;
-border-radius:20px;
-padding:30px;
-border:1px solid #ebcaca;
-transition:.25s;
-
-}
-
-.tos-card:hover{
-
-transform:translateY(-6px);
-
-}
-
-.tos-card h3{
-
-color:#d85d7b;
-margin-top:0;
-margin-bottom:15px;
-
-}
-
-.tos-card li{
-margin:8px 0;
-}
-
 /* CONTACT */
 
 .contact{
 text-align:center;
+margin:70px 0;
 }
 
 .contact a{
@@ -324,40 +299,30 @@ transition:.25s;
 }
 
 .contact a:hover{
-
 transform:translateY(-6px);
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
-
 }
 
-/* FLOWER PETAL */
+/* MODAL */
 
-.petal{
+.modal{
 
 position:fixed;
-top:-20px;
-width:18px;
-height:18px;
-background:url("petal.png") no-repeat center;
-background-size:contain;
-pointer-events:none;
-z-index:-1;
-animation:fall linear infinite;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
 
 }
 
-@keyframes fall{
-
-0%{transform:translateY(-10vh) rotate(0deg);}
-100%{transform:translateY(110vh) rotate(360deg);}
-
-}
-
-footer{
-text-align:center;
-margin:70px 0 30px;
-font-size:13px;
-color:#8b6e6e;
+.modal img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
 }
 
 </style>
@@ -385,7 +350,7 @@ Milya Meiira
 
 <section class="hero">
 
-<img src="avatar.jpg" class="avatar">
+<img src="avatar.jpg" class="avatar" onclick="openModal(this.src)">
 
 <h1>Milya Meiira</h1>
 
@@ -400,51 +365,20 @@ Milya Meiira
 
 </section>
 
-<!-- GALLERY -->
+<h2 class="section-title"><img src="peach.png"> Gallery</h2>
 
-<h2 class="section-title">
-<img src="peach.png"> Gallery
-</h2>
+<div class="gallery-filter">
 
-<section id="gallery" class="section">
-
-<h3>Normal</h3>
-
-<div class="gallery">
-
-<img src="n1.jpg">
-<img src="n2.jpg">
-<img src="n3.jpg">
-<img src="n4.jpg">
-<img src="n5.jpg">
-<img src="n6.jpg">
+<button class="active" onclick="showGallery('normal',this)">Normal</button>
+<button onclick="showGallery('chibi',this)">Chibi</button>
 
 </div>
 
-<br>
+<div class="gallery" id="gallery"></div>
 
-<h3>Chibi</h3>
+<h2 class="section-title"><img src="peach.png"> Bảng giá</h2>
 
-<div class="gallery">
-
-<img src="c1.jpg">
-<img src="c2.jpg">
-<img src="c3.jpg">
-<img src="c4.jpg">
-<img src="c5.jpg">
-<img src="c6.jpg">
-
-</div>
-
-</section>
-
-<!-- PRICE -->
-
-<h2 class="section-title">
-<img src="peach.png"> Bảng giá
-</h2>
-
-<section id="price" class="section">
+<section class="price-wrapper">
 
 <div class="price-box">
 
@@ -452,37 +386,12 @@ Milya Meiira
 
 <table>
 
-<tr>
-<th>Loại</th>
-<th>Sketch</th>
-<th>Sketch Color</th>
-<th>Full</th>
-</tr>
-
-<tr>
-<td>Headshot</td>
-<td>50k</td>
-<td>80k</td>
-<td>100k</td>
-</tr>
-
-<tr>
-<td>Chest-up</td>
-<td>80k</td>
-<td>100k</td>
-<td>135k</td>
-</tr>
-
-<tr>
-<td>Half-body</td>
-<td>110k</td>
-<td>150k</td>
-<td>200k</td>
-</tr>
+<tr><th>Loại</th><th>Sketch</th><th>Full</th></tr>
+<tr><td>Headshot</td><td>50k</td><td>100k</td></tr>
+<tr><td>Chest up</td><td>80k</td><td>135k</td></tr>
+<tr><td>Half body</td><td>110k</td><td>200k</td></tr>
 
 </table>
-
-<p class="note">(Hiện tại mình không nhận full body)</p>
 
 </div>
 
@@ -492,26 +401,10 @@ Milya Meiira
 
 <table>
 
-<tr>
-<th>Loại</th>
-<th>Sketch</th>
-<th>Color</th>
-<th>Full</th>
-</tr>
-
-<tr>
-<td>Headshot</td>
-<td>40k</td>
-<td>60k</td>
-<td>80k</td>
-</tr>
-
-<tr>
-<td>Half-body</td>
-<td>60k</td>
-<td>80k</td>
-<td>100k</td>
-</tr>
+<tr><th>Loại</th><th>Sketch</th><th>Full</th></tr>
+<tr><td>Head</td><td>40k</td><td>70k</td></tr>
+<tr><td>Half</td><td>70k</td><td>110k</td></tr>
+<tr><td>Full</td><td>100k</td><td>150k</td></tr>
 
 </table>
 
@@ -519,95 +412,21 @@ Milya Meiira
 
 </section>
 
-<!-- TOS -->
-
-<h2 class="section-title">
-<img src="peach.png"> Điều Khoản Dịch Vụ
-</h2>
-
-<section id="tos" class="tos-wrapper">
-
-<div class="tos-card">
-
-<h3>I. Về Commission</h3>
-
-<ul>
-<li>Thanh toán full tiền commission sau khi chốt sketch.</li>
-<li>Thêm character: +100% giá gốc.</li>
-<li>Phương thức thanh toán: Bank / Momo.</li>
-<li>Deadline từ 1 – 2 tuần.</li>
-<li>Có nhận rush.</li>
-<li>Sửa miễn phí trước khi chốt sketch.</li>
-<li>Không nhận: background khó, furry, mecha.</li>
-</ul>
-
-</div>
-
-<div class="tos-card">
-
-<h3>II. Về Khách Hàng</h3>
-
-<ul>
-<li>Gửi đầy đủ reference.</li>
-<li>Không thúc ép artist.</li>
-<li>Không feed tranh cho AI.</li>
-<li>Đăng lại cần credit.</li>
-</ul>
-
-</div>
-
-<div class="tos-card">
-
-<h3>III. Về Artist</h3>
-
-<ul>
-<li>Có quyền từ chối commission.</li>
-<li>Gửi WIP sketch → line → final.</li>
-<li>Có quyền đăng portfolio.</li>
-</ul>
-
-</div>
-
-</section>
-
-<section id="contact" class="section contact">
+<section id="contact" class="contact">
 
 <a href="https://www.facebook.com/kemdao.peach/">Liên hệ Facebook</a>
 
 </section>
 
-<footer>
-
-Do not repost my art without permission
-
-</footer>
-
-<div class="popup" id="popup">
-<img id="popup-img">
+<div class="modal" id="modal" onclick="this.style.display='none'">
+<img id="modal-img">
 </div>
 
 <script>
 
-document.querySelectorAll(".gallery img").forEach(img=>{
+/* PETAL */
 
-img.onclick=()=>{
-
-document.getElementById("popup").style.display="flex"
-document.getElementById("popup-img").src=img.src
-
-}
-
-})
-
-document.getElementById("popup").onclick=()=>{
-
-document.getElementById("popup").style.display="none"
-
-}
-
-/* PETALS */
-
-for(let i=0;i<40;i++){
+for(let i=0;i<35;i++){
 
 let petal=document.createElement("div")
 petal.className="petal"
@@ -616,6 +435,46 @@ petal.style.left=Math.random()*100+"vw"
 petal.style.animationDuration=(6+Math.random()*8)+"s"
 
 document.body.appendChild(petal)
+
+}
+
+/* GALLERY */
+
+const normal=[
+"n1.jpg","n2.jpg","n3.jpg","n4.jpg","n5.jpg","n6.jpg"
+]
+
+const chibi=[
+"c1.jpg","c2.jpg","c3.jpg","c4.jpg","c5.jpg","c6.jpg"
+]
+
+function showGallery(type,btn){
+
+document.querySelectorAll(".gallery-filter button")
+.forEach(b=>b.classList.remove("active"))
+
+btn.classList.add("active")
+
+let data=type==="normal"?normal:chibi
+
+let html=""
+
+data.forEach(img=>{
+html+=`<img src="${img}" onclick="openModal('${img}')">`
+})
+
+document.getElementById("gallery").innerHTML=html
+
+}
+
+showGallery("normal",document.querySelector(".gallery-filter button"))
+
+/* MODAL */
+
+function openModal(src){
+
+document.getElementById("modal-img").src=src
+document.getElementById("modal").style.display="flex"
 
 }
 
