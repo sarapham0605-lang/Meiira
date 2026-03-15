@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -14,10 +16,8 @@ body{
 margin:0;
 font-family:'Be Vietnam Pro',sans-serif;
 background:#f6eeee;
-color:#5c4545;
+color:#5b4545;
 overflow-x:hidden;
-position:relative;
-z-index:1;
 }
 
 /* NAVBAR */
@@ -51,7 +51,7 @@ width:30px;
 
 .menu{
 display:flex;
-gap:28px;
+gap:25px;
 align-items:center;
 }
 
@@ -60,17 +60,16 @@ text-decoration:none;
 color:#6a5050;
 font-weight:600;
 position:relative;
-padding-bottom:5px;
 }
 
 .menu a::after{
 content:"";
 position:absolute;
-bottom:0;
+bottom:-3px;
 left:0;
 width:0%;
 height:2px;
-background:#e07a8e;
+background:#e88fa2;
 transition:.25s;
 }
 
@@ -85,7 +84,6 @@ background:#e88fa2;
 color:white !important;
 padding:10px 24px;
 border-radius:25px;
-font-weight:600;
 }
 
 /* HERO */
@@ -105,7 +103,7 @@ transition:.3s;
 }
 
 .avatar:hover{
-transform:translateY(-8px) scale(1.05);
+transform:translateY(-10px) scale(1.05);
 box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
@@ -114,43 +112,39 @@ font-size:45px;
 margin:15px 0 5px;
 }
 
-/* QUICK BUTTONS */
+/* QUICK BUTTON */
 
 .quick{
 display:flex;
 justify-content:center;
-gap:14px;
+gap:15px;
 margin-top:20px;
 flex-wrap:wrap;
 }
 
 .btn{
-padding:12px 28px;
+padding:12px 26px;
 border-radius:25px;
 font-weight:600;
 text-decoration:none;
 transition:.25s;
 }
 
-.btn:hover{
-transform:translateY(-4px);
-}
-
-/* pink fill */
-
 .btn-main{
 background:#e88fa2;
 color:white;
 }
-
-/* outline */
 
 .btn-outline{
 border:2px solid #e88fa2;
 color:#e88fa2;
 }
 
-/* SECTION TITLE */
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* TITLE */
 
 .section-title{
 display:flex;
@@ -246,6 +240,13 @@ font-weight:600;
 margin-bottom:15px;
 }
 
+/* TOS */
+
+.tos h3{
+color:#d85d7b;
+margin-top:20px;
+}
+
 /* CONTACT */
 
 .contact{
@@ -337,6 +338,8 @@ Milya Meiira
 
 </section>
 
+<!-- GALLERY -->
+
 <h2 class="section-title">
 <img src="peach.png"> Gallery
 </h2>
@@ -344,16 +347,15 @@ Milya Meiira
 <section id="gallery" class="section">
 
 <div class="filter">
-
 <button class="active" onclick="showGallery('normal',this)">Normal</button>
-
 <button onclick="showGallery('chibi',this)">Chibi</button>
-
 </div>
 
 <div class="gallery" id="gallery-container"></div>
 
 </section>
+
+<!-- PRICE -->
 
 <h2 class="section-title">
 <img src="peach.png"> Bảng giá
@@ -363,9 +365,7 @@ Milya Meiira
 
 <div class="section">
 
-<h3 class="pink-title">Normal</h3>
-
-<div class="note">(Hiện tại mình không nhận full body)</div>
+<h3>Normal</h3>
 
 <table>
 
@@ -378,32 +378,34 @@ Milya Meiira
 
 <tr>
 <td>Headshot</td>
-<td>50k</td>
-<td>80k</td>
-<td>100k</td>
+<td>50.000₫</td>
+<td>80.000₫</td>
+<td>100.000₫</td>
 </tr>
 
 <tr>
 <td>Chest-up</td>
-<td>80k</td>
-<td>100k</td>
-<td>135k</td>
+<td>80.000₫</td>
+<td>100.000₫</td>
+<td>135.000₫</td>
 </tr>
 
 <tr>
 <td>Half-body</td>
-<td>110k</td>
-<td>150k</td>
-<td>200k</td>
+<td>110.000₫</td>
+<td>150.000₫</td>
+<td>200.000₫</td>
 </tr>
 
 </table>
+
+<p class="note">(Hiện tại mình không nhận full body)</p>
 
 </div>
 
 <div class="section">
 
-<h3 class="pink-title">Chibi</h3>
+<h3>Chibi</h3>
 
 <table>
 
@@ -416,23 +418,23 @@ Milya Meiira
 
 <tr>
 <td>Headshot</td>
-<td>30k</td>
-<td>50k</td>
-<td>80k</td>
+<td>30.000₫</td>
+<td>50.000₫</td>
+<td>80.000₫</td>
 </tr>
 
 <tr>
 <td>Half-body</td>
-<td>40k</td>
-<td>60k</td>
-<td>90k</td>
+<td>40.000₫</td>
+<td>60.000₫</td>
+<td>90.000₫</td>
 </tr>
 
 <tr>
 <td>Full-body</td>
-<td>50k</td>
-<td>80k</td>
-<td>110k</td>
+<td>50.000₫</td>
+<td>80.000₫</td>
+<td>110.000₫</td>
 </tr>
 
 </table>
@@ -441,71 +443,40 @@ Milya Meiira
 
 </section>
 
+<!-- TOS -->
+
 <h2 class="section-title">
 <img src="peach.png"> TOS
 </h2>
 
-<h2 class="section-title">
-<img src="peach.png"> Điều khoản dịch vụ
-</h2>
+<section id="tos" class="section tos">
 
-<section id="tos">
+<h3>1. Về khách hàng</h3>
 
-<div class="section">
+<p>• Gửi đầy đủ brief và yêu cầu trước khi đặt commission.</p>
+<p>• Phí details sẽ được thương lượng giữa artist và khách hàng.</p>
+<p>• Không feed tranh cho AI.</p>
 
-<h3 class="pink-title">1.Về commission</h3>
+<h3>2. Thanh toán & quy trình</h3>
 
 <p>• Thanh toán full tiền commission sau khi chốt sketch.</p>
-
+<p>• Phương thức thanh toán: Bank / Momo (Vui lòng chụp bill sau khi thanh toán).</p>
 <p>• Thêm character: +100% giá gốc.</p>
+<p>• Private: thêm 50.000₫.</p>
 
-<p>• Phương thức thanh toán: Bank / Momo. (Vui lòng chụp bill sau khi thanh toán)</p>
+<h3>3. Deadline & chỉnh sửa</h3>
 
-<p>• Deadline từ 1 – 2 tuần. Có thể hoàn thành sớm hơn nếu artist có thời gian rảnh.</p>
+<p>• Deadline từ 1 – 2 tuần, có thể nhanh hơn nếu artist rảnh.</p>
+<p>• Có nhận rush: phí từ 50.000 – 200.000₫ tùy deadline.</p>
+<p>• Sửa miễn phí trước khi chốt sketch.</p>
+<p>• Sau sketch hoặc final: phí 2k – 5k/lần (trừ khi lỗi từ artist).</p>
 
-<p>• Có nhận rush commission. Giá tùy thuộc vào deadline khách yêu cầu, dao động từ <b>50.000₫ – 200.000₫</b>.</p>
+<h3>4. Không nhận vẽ</h3>
 
-<p>• Phí detail sẽ được thương lượng giữa artist và khách hàng.</p>
-
-<p>• Commission private: +50.000₫.</p>
-
-<p><b>Không nhận vẽ:</b> background hoặc pose quá khó, người già, người thật, furry, mecha, nhân vật có mật độ chi tiết quá cao.</p>
-
-</div>
-
-
-<div class="section">
-
-<h3 class="pink-title">2.Về khách hàng</h3>
-
-<p>• Gửi brief rõ ràng (ảnh tham khảo, mô tả nhân vật, pose nếu có).</p>
-
-<p>• Phí sửa hoàn toàn miễn phí trước khi chốt sketch.</p>
-
-<p>• Sau khi chốt sketch:</p>
-
-<p>- Sửa ở giai đoạn line hoặc final sẽ tính thêm phí <b>2.000₫ – 5.000₫ / lần</b>.</p>
-
-<p>- Nếu lỗi nằm ở artist thì sẽ sửa miễn phí.</p>
-
-<p>• Khách hàng vui lòng không sử dụng tranh để feed cho AI.</p>
-
-</div>
-
-
-<div class="section">
-
-<h3 class="pink-title">3.Về artist</h3>
-
-<p>• Artist có quyền từ chối commission nếu nội dung vượt quá khả năng.</p>
-
-<p>• Artist được phép sử dụng tranh làm sample hoặc đăng lên portfolio.</p>
-
-<p>• Nếu khách muốn giữ private, vui lòng trả thêm phí private.</p>
-
-<p>• Artist sẽ cập nhật tiến độ commission trong quá trình làm việc.</p>
-
-</div>
+<p>• Background phức tạp hoặc pose quá khó.</p>
+<p>• Người già, người thật.</p>
+<p>• Furry, mecha.</p>
+<p>• Thiết kế có mật độ chi tiết quá cao.</p>
 
 </section>
 
@@ -522,8 +493,6 @@ Do not repost or use my art without permission.
 </footer>
 
 <script>
-
-/* GALLERY */
 
 const normal=[
 "sample1.jpg","sample2.jpg","sample3.jpg",
@@ -557,8 +526,6 @@ document.getElementById("gallery-container").innerHTML=html
 
 showGallery("normal",document.querySelector(".filter button"))
 
-/* PETALS */
-
 for(let i=0;i<35;i++){
 
 let petal=document.createElement("div")
@@ -570,8 +537,6 @@ petal.style.left=Math.random()*100+"vw"
 petal.style.animationDuration=(6+Math.random()*8)+"s"
 
 petal.style.opacity=Math.random()
-
-petal.style.transform=`scale(${0.6+Math.random()})`
 
 document.body.appendChild(petal)
 
