@@ -12,17 +12,24 @@
 
 <style>
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
+
 margin:0;
 font-family:'Be Vietnam Pro',sans-serif;
 background:#f6eeee;
 color:#5b4545;
 overflow-x:hidden;
+
 }
 
 /* NAVBAR */
 
 nav{
+
 position:fixed;
 top:0;
 width:100%;
@@ -30,123 +37,131 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 8%;
-background:rgba(255,255,255,0.7);
+background:rgba(255,255,255,0.75);
 backdrop-filter:blur(8px);
 z-index:999;
+
 }
 
 .logo{
+
 display:flex;
 align-items:center;
 gap:10px;
 font-weight:700;
 font-size:20px;
+
 }
 
 .logo img{
 width:30px;
 }
 
-/* MENU */
-
 .menu{
+
 display:flex;
 gap:25px;
 align-items:center;
+
 }
 
 .menu a{
+
 text-decoration:none;
 color:#6a5050;
 font-weight:600;
-position:relative;
-}
 
-.menu a::after{
-content:"";
-position:absolute;
-bottom:-3px;
-left:0;
-width:0%;
-height:2px;
-background:#e88fa2;
-transition:.25s;
 }
-
-.menu a:hover::after{
-width:100%;
-}
-
-/* CONTACT BUTTON */
 
 .contact-btn{
+
 background:#e88fa2;
-color:white !important;
+color:white;
 padding:10px 24px;
 border-radius:25px;
+
 }
 
 /* HERO */
 
 .hero{
+
 padding-top:120px;
 text-align:center;
+
 }
 
 .avatar{
+
 width:170px;
 height:170px;
 border-radius:50%;
 border:6px solid #e8a3b0;
 object-fit:cover;
 transition:.3s;
+
 }
 
 .avatar:hover{
+
 transform:translateY(-10px) scale(1.05);
 box-shadow:0 10px 20px rgba(0,0,0,0.15);
+
 }
 
 .hero h1{
+
 font-size:45px;
 margin:15px 0 5px;
+
 }
 
-/* QUICK BUTTON */
+/* BUTTONS */
 
 .quick{
+
 display:flex;
 justify-content:center;
 gap:15px;
 margin-top:20px;
 flex-wrap:wrap;
+
 }
 
 .btn{
+
 padding:12px 26px;
 border-radius:25px;
 font-weight:600;
 text-decoration:none;
 transition:.25s;
+
 }
 
 .btn-main{
+
 background:#e88fa2;
 color:white;
+
 }
 
 .btn-outline{
+
 border:2px solid #e88fa2;
 color:#e88fa2;
+
 }
 
 .btn:hover{
+
 transform:translateY(-4px);
+
 }
 
 /* TITLE */
 
 .section-title{
+
 display:flex;
 align-items:center;
 justify-content:center;
@@ -154,15 +169,19 @@ gap:10px;
 font-size:38px;
 font-family:'Playfair Display',serif;
 margin-top:80px;
+
 }
 
 .section-title img{
+
 height:35px;
+
 }
 
-/* SECTION */
+/* BOX */
 
 .section{
+
 background:#f3e2e2;
 border-radius:20px;
 padding:40px;
@@ -170,110 +189,173 @@ margin:40px auto;
 max-width:950px;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 transition:.25s;
+
 }
 
 .section:hover{
+
 transform:translateY(-6px);
+
 }
 
-/* FILTER */
+/* GALLERY */
 
 .filter{
+
 display:flex;
 justify-content:center;
 gap:14px;
 margin-bottom:20px;
+
 }
 
 .filter button{
+
 padding:10px 24px;
 border-radius:25px;
 border:2px solid #e88fa2;
 background:none;
 font-weight:600;
 cursor:pointer;
+
 }
 
 .filter button.active{
+
 background:#e88fa2;
 color:white;
+
 }
 
-/* GALLERY */
-
 .gallery{
+
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:18px;
+
 }
 
 .gallery img{
+
 width:100%;
 border-radius:12px;
+
 }
 
-/* TABLE */
+/* PRICE */
 
 table{
+
 width:100%;
 border-collapse:collapse;
+
 }
 
 th{
+
 background:#e88fa2;
 color:white;
 padding:14px;
+
 }
 
 td{
+
 padding:14px;
 text-align:center;
+
 }
 
 tr:nth-child(even){
+
 background:#f9eeee;
+
 }
 
 .note{
+
 color:#c05773;
 font-weight:600;
-margin-bottom:15px;
+margin-top:10px;
+
 }
 
 /* TOS */
 
-.tos h3{
+.tos-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+max-width:950px;
+margin:40px auto;
+
+}
+
+.tos-box{
+
+background:#f3e2e2;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
+transition:.25s;
+
+}
+
+.tos-box:hover{
+
+transform:translateY(-8px);
+box-shadow:0 15px 25px rgba(0,0,0,0.15);
+
+}
+
+.tos-box h3{
+
 color:#d85d7b;
-margin-top:20px;
+margin-top:0;
+
+}
+
+.tos-box p{
+
+margin:6px 0;
+
 }
 
 /* CONTACT */
 
 .contact{
+
 text-align:center;
+
 }
 
 .contact a{
+
 background:#e88fa2;
 color:white;
 padding:14px 34px;
 border-radius:30px;
 text-decoration:none;
 font-weight:600;
+
 }
 
 /* FOOTER */
 
 footer{
+
 text-align:center;
 margin:70px 0 30px;
 font-size:13px;
 color:#8b6e6e;
+
 }
 
 /* PETAL */
 
 .petal{
+
 position:fixed;
 top:-50px;
 width:20px;
@@ -283,17 +365,14 @@ background-size:contain;
 pointer-events:none;
 animation:fall linear infinite;
 z-index:-1;
+
 }
 
 @keyframes fall{
 
-0%{
-transform:translateY(-10vh) rotate(0deg);
-}
+0%{transform:translateY(-10vh) rotate(0deg);}
 
-100%{
-transform:translateY(110vh) rotate(360deg);
-}
+100%{transform:translateY(110vh) rotate(360deg);}
 
 }
 
@@ -310,10 +389,12 @@ Milya Meiira
 </div>
 
 <div class="menu">
+
 <a href="#gallery">Gallery</a>
 <a href="#price">Bảng giá</a>
 <a href="#tos">TOS</a>
 <a href="#contact" class="contact-btn">Liên hệ</a>
+
 </div>
 
 </nav>
@@ -327,11 +408,8 @@ Milya Meiira
 <div class="quick">
 
 <a href="#gallery" class="btn btn-main">Xem Gallery</a>
-
 <a href="#price" class="btn btn-outline">Bảng giá</a>
-
 <a href="#tos" class="btn btn-outline">TOS</a>
-
 <a href="#contact" class="btn btn-main">Liên hệ Commission</a>
 
 </div>
@@ -347,8 +425,10 @@ Milya Meiira
 <section id="gallery" class="section">
 
 <div class="filter">
+
 <button class="active" onclick="showGallery('normal',this)">Normal</button>
 <button onclick="showGallery('chibi',this)">Chibi</button>
+
 </div>
 
 <div class="gallery" id="gallery-container"></div>
@@ -361,9 +441,7 @@ Milya Meiira
 <img src="peach.png"> Bảng giá
 </h2>
 
-<section id="price">
-
-<div class="section">
+<section id="price" class="section">
 
 <h3>Normal</h3>
 
@@ -378,68 +456,28 @@ Milya Meiira
 
 <tr>
 <td>Headshot</td>
-<td>50.000₫</td>
-<td>80.000₫</td>
-<td>100.000₫</td>
+<td>50k</td>
+<td>80k</td>
+<td>100k</td>
 </tr>
 
 <tr>
 <td>Chest-up</td>
-<td>80.000₫</td>
-<td>100.000₫</td>
-<td>135.000₫</td>
+<td>80k</td>
+<td>100k</td>
+<td>135k</td>
 </tr>
 
 <tr>
 <td>Half-body</td>
-<td>110.000₫</td>
-<td>150.000₫</td>
-<td>200.000₫</td>
+<td>110k</td>
+<td>150k</td>
+<td>200k</td>
 </tr>
 
 </table>
 
 <p class="note">(Hiện tại mình không nhận full body)</p>
-
-</div>
-
-<div class="section">
-
-<h3>Chibi</h3>
-
-<table>
-
-<tr>
-<th>Loại</th>
-<th>Sketch</th>
-<th>Sketch Color</th>
-<th>Full</th>
-</tr>
-
-<tr>
-<td>Headshot</td>
-<td>30.000₫</td>
-<td>50.000₫</td>
-<td>80.000₫</td>
-</tr>
-
-<tr>
-<td>Half-body</td>
-<td>40.000₫</td>
-<td>60.000₫</td>
-<td>90.000₫</td>
-</tr>
-
-<tr>
-<td>Full-body</td>
-<td>50.000₫</td>
-<td>80.000₫</td>
-<td>110.000₫</td>
-</tr>
-
-</table>
-
-</div>
 
 </section>
 
@@ -449,61 +487,64 @@ Milya Meiira
 <img src="peach.png"> TOS
 </h2>
 
-<section id="tos" class="section tos">
+<section class="tos-container">
 
-<h3>1. Về khách hàng</h3>
+<div class="tos-box">
 
-<p>• Gửi đầy đủ brief và yêu cầu trước khi đặt commission.</p>
-<p>• Phí details sẽ được thương lượng giữa artist và khách hàng.</p>
-<p>• Không feed tranh cho AI.</p>
+<h3>1. Về Commission</h3>
 
-<h3>2. Thanh toán & quy trình</h3>
+<p>Thanh toán full tiền comm sau khi chốt sketch.</p>
+<p>Thêm character: +100% giá gốc.</p>
+<p>Phương thức thanh toán: Bank / Momo (chụp bill sau khi thanh toán).</p>
+<p>Deadline từ 1 – 2 tuần.</p>
+<p>Có nhận rush: 50k – 200k.</p>
+<p>Sửa miễn phí trước khi chốt sketch.</p>
+<p>Sửa sau sketch / final: 2k – 5k.</p>
+<p>Không nhận: background khó, người già, người thật, furry, mecha.</p>
+<p>Phí detail sẽ thương lượng.</p>
+<p>Private: thêm 50 cành.</p>
 
-<p>• Thanh toán full tiền commission sau khi chốt sketch.</p>
-<p>• Phương thức thanh toán: Bank / Momo (Vui lòng chụp bill sau khi thanh toán).</p>
-<p>• Thêm character: +100% giá gốc.</p>
-<p>• Private: thêm 50.000₫.</p>
+</div>
 
-<h3>3. Deadline & chỉnh sửa</h3>
+<div class="tos-box">
 
-<p>• Deadline từ 1 – 2 tuần, có thể nhanh hơn nếu artist rảnh.</p>
-<p>• Có nhận rush: phí từ 50.000 – 200.000₫ tùy deadline.</p>
-<p>• Sửa miễn phí trước khi chốt sketch.</p>
-<p>• Sau sketch hoặc final: phí 2k – 5k/lần (trừ khi lỗi từ artist).</p>
+<h3>2. Về Khách Hàng</h3>
 
-<h3>4. Không nhận vẽ</h3>
+<p>Gửi đầy đủ reference.</p>
+<p>Không thúc ép artist.</p>
+<p>Không feed tranh cho AI.</p>
+<p>Đăng lại cần credit.</p>
 
-<p>• Background phức tạp hoặc pose quá khó.</p>
-<p>• Người già, người thật.</p>
-<p>• Furry, mecha.</p>
-<p>• Thiết kế có mật độ chi tiết quá cao.</p>
+</div>
+
+<div class="tos-box">
+
+<h3>3. Về Artist</h3>
+
+<p>Artist có quyền từ chối commission.</p>
+<p>Artist sẽ gửi WIP sketch → line → final.</p>
+<p>Artist có quyền đăng portfolio.</p>
+
+</div>
 
 </section>
 
 <section id="contact" class="section contact">
 
-<a href="https://www.facebook.com/kemdao.peach/">Liên hệ qua Facebook</a>
+<a href="https://www.facebook.com/kemdao.peach/">Liên hệ Facebook</a>
 
 </section>
 
 <footer>
 
-Do not repost or use my art without permission.
+Do not repost my art without permission
 
 </footer>
 
 <script>
 
-const normal=[
-"sample1.jpg","sample2.jpg","sample3.jpg",
-"sample4.jpg","sample5.jpg","sample6.jpg",
-"sample7.jpg","sample8.jpg","sample9.jpg"
-]
-
-const chibi=[
-"chibi1.jpg","chibi2.jpg","chibi3.jpg",
-"chibi4.jpg","chibi5.jpg","chibi6.jpg"
-]
+const normal=["sample1.jpg","sample2.jpg","sample3.jpg"]
+const chibi=["chibi1.jpg","chibi2.jpg","chibi3.jpg"]
 
 function showGallery(type,btn){
 
@@ -512,12 +553,14 @@ document.querySelectorAll(".filter button")
 
 btn.classList.add("active")
 
-let list = type==="normal"?normal:chibi
+let list=type==="normal"?normal:chibi
 
 let html=""
 
 list.forEach(img=>{
+
 html+=`<img src="${img}">`
+
 })
 
 document.getElementById("gallery-container").innerHTML=html
@@ -529,14 +572,10 @@ showGallery("normal",document.querySelector(".filter button"))
 for(let i=0;i<35;i++){
 
 let petal=document.createElement("div")
-
 petal.className="petal"
 
 petal.style.left=Math.random()*100+"vw"
-
 petal.style.animationDuration=(6+Math.random()*8)+"s"
-
-petal.style.opacity=Math.random()
 
 document.body.appendChild(petal)
 
