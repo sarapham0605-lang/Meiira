@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
 
 <meta charset="UTF-8">
@@ -23,6 +22,7 @@ overflow-x:hidden;
 /* NAVBAR */
 
 nav{
+
 position:fixed;
 top:0;
 left:0;
@@ -33,9 +33,13 @@ justify-content:space-between;
 align-items:center;
 
 padding:18px 8%;
+
 background:white;
+
 z-index:1000;
+
 transition:.3s;
+
 }
 
 nav.scrolled{
@@ -55,11 +59,8 @@ font-size:20px;
 width:28px;
 }
 
-/* MENU */
-
 .menu{
 display:flex;
-align-items:center;
 gap:28px;
 }
 
@@ -72,43 +73,18 @@ padding-bottom:6px;
 }
 
 .menu a::after{
-
 content:"";
-
 position:absolute;
-
 left:0;
 bottom:0;
-
 width:0%;
-
 height:2px;
-
 background:#e07a8e;
-
 transition:.25s;
-
 }
 
 .menu a:hover::after{
 width:100%;
-}
-
-.contact-btn{
-
-background:#e88fa2;
-color:white;
-
-padding:10px 24px;
-
-border-radius:30px;
-
-font-weight:600;
-
-}
-
-.contact-btn::after{
-display:none;
 }
 
 /* HERO */
@@ -119,8 +95,6 @@ padding-top:120px;
 text-align:center;
 
 }
-
-/* AVATAR */
 
 .avatar{
 
@@ -145,25 +119,28 @@ box-shadow:0 12px 25px rgba(0,0,0,0.2);
 
 }
 
-/* BUTTONS BELOW AVATAR */
+.hero h1{
+font-size:46px;
+margin:15px 0 5px;
+}
 
-.hero-buttons{
+/* ACTION BUTTONS */
 
-margin-top:30px;
+.actions{
 
 display:flex;
-
 justify-content:center;
-
 gap:20px;
+
+margin-top:35px;
 
 flex-wrap:wrap;
 
 }
 
-.hero-buttons a{
+.btn{
 
-padding:14px 28px;
+padding:16px 36px;
 
 border-radius:40px;
 
@@ -171,53 +148,30 @@ font-weight:600;
 
 text-decoration:none;
 
-transition:.3s;
-
-box-shadow:0 6px 12px rgba(0,0,0,0.08);
+transition:.25s;
 
 }
 
-/* pink buttons */
+.btn-pink{
 
-.btn-filled{
-
-background:#e88fa2;
-
+background:#ee8fa0;
 color:white;
 
 }
 
-/* outline buttons */
-
 .btn-outline{
 
-background:white;
-
-color:#e88fa2;
-
-border:2px solid #e88fa2;
+border:2px solid #ee8fa0;
+color:#ee8fa0;
 
 }
 
-/* hover */
+.btn:hover{
 
-.hero-buttons a:hover{
-
-transform:translateY(-5px);
+transform:translateY(-6px);
 
 box-shadow:0 10px 20px rgba(0,0,0,0.15);
 
-}
-
-/* NAME */
-
-.hero h1{
-font-size:46px;
-margin:15px 0 5px;
-}
-
-.subtitle{
-color:#9c7575;
 }
 
 /* TITLES */
@@ -258,6 +212,12 @@ max-width:950px;
 
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 
+transition:.3s;
+
+}
+
+.section:hover{
+transform:translateY(-4px);
 }
 
 /* FILTER */
@@ -265,11 +225,8 @@ box-shadow:0 10px 25px rgba(0,0,0,0.08);
 .filter{
 
 display:flex;
-
 justify-content:center;
-
 gap:14px;
-
 margin-bottom:25px;
 
 }
@@ -293,7 +250,6 @@ cursor:pointer;
 .filter button.active{
 
 background:#e88fa2;
-
 color:white;
 
 }
@@ -313,7 +269,6 @@ gap:18px;
 .gallery img{
 
 width:100%;
-
 border-radius:12px;
 
 }
@@ -343,11 +298,8 @@ background:#f9eeee;
 .price-title{
 
 font-size:24px;
-
 color:#d85d7b;
-
 margin-bottom:12px;
-
 font-weight:700;
 
 }
@@ -355,11 +307,8 @@ font-weight:700;
 .price-note{
 
 margin-top:10px;
-
 font-size:14px;
-
 color:#a24c60;
-
 font-style:italic;
 
 }
@@ -369,30 +318,9 @@ font-style:italic;
 .tos-title{
 
 font-size:22px;
-
 color:#d85d7b;
-
 font-weight:700;
-
 margin-bottom:12px;
-
-}
-
-.ai-warning{
-
-margin-top:15px;
-
-padding:14px;
-
-background:#f7c5ce;
-
-border-left:6px solid #d85d7b;
-
-border-radius:10px;
-
-font-weight:700;
-
-color:#a93c56;
 
 }
 
@@ -405,15 +333,10 @@ text-align:center;
 .contact a{
 
 background:#e88fa2;
-
 color:white;
-
 padding:14px 35px;
-
 border-radius:30px;
-
 text-decoration:none;
-
 font-weight:600;
 
 }
@@ -423,30 +346,24 @@ font-weight:600;
 footer{
 
 text-align:center;
-
 margin:70px 0 30px;
-
 font-size:13px;
-
 color:#8b6e6e;
 
 }
 
-/* PETALS */
+/* PETAL */
 
 .petal{
 
 position:fixed;
-
 top:-40px;
 
 width:22px;
 height:22px;
 
 background-image:url("petal.png");
-
 background-size:contain;
-
 background-repeat:no-repeat;
 
 pointer-events:none;
@@ -474,7 +391,7 @@ transform:translateY(110vh) rotate(360deg);
 
 <body>
 
-<nav>
+<nav id="navbar">
 
 <div class="logo">
 <img src="peach.png">
@@ -483,34 +400,29 @@ Milya Meiira
 
 <div class="menu">
 
-<a href="#home">Trang chủ</a>
 <a href="#gallery">Gallery</a>
 <a href="#price">Bảng giá</a>
-<a href="#tos">Điều khoản</a>
-
-<a href="#contact" class="contact-btn">Liên hệ</a>
+<a href="#tos">TOS</a>
 
 </div>
 
 </nav>
 
-<section id="home" class="hero">
+<section class="hero">
 
 <img src="avatar.jpg" class="avatar">
 
 <h1>Milya Meiira</h1>
 
-<div class="subtitle">Digital Artist</div>
+<div class="actions">
 
-<div class="hero-buttons">
+<a href="#gallery" class="btn btn-pink">Xem Gallery</a>
 
-<a href="#gallery" class="btn-filled">Xem Gallery</a>
+<a href="#price" class="btn btn-outline">Bảng Giá</a>
 
-<a href="#price" class="btn-outline">Bảng Giá</a>
+<a href="#tos" class="btn btn-outline">TOS</a>
 
-<a href="#tos" class="btn-outline">TOS</a>
-
-<a href="#contact" class="btn-filled">Liên hệ Commission</a>
+<a href="#contact" class="btn btn-pink">Liên hệ Commission</a>
 
 </div>
 
@@ -556,23 +468,23 @@ Bảng giá
 
 <tr>
 <td>Headshot</td>
-<td>50.000₫</td>
-<td>80.000₫</td>
-<td>100.000₫</td>
+<td>50k</td>
+<td>80k</td>
+<td>100k</td>
 </tr>
 
 <tr>
 <td>Chest-up</td>
-<td>80.000₫</td>
-<td>100.000₫</td>
-<td>135.000₫</td>
+<td>80k</td>
+<td>100k</td>
+<td>135k</td>
 </tr>
 
 <tr>
 <td>Half-body</td>
-<td>110.000₫</td>
-<td>150.000₫</td>
-<td>200.000₫</td>
+<td>110k</td>
+<td>150k</td>
+<td>200k</td>
 </tr>
 
 </table>
@@ -580,6 +492,44 @@ Bảng giá
 <div class="price-note">
 Hiện tại mình không nhận full body
 </div>
+
+</div>
+
+<div class="section">
+
+<div class="price-title">2. Chibi</div>
+
+<table>
+
+<tr>
+<th>Loại</th>
+<th>Sketch</th>
+<th>Sketch Color</th>
+<th>Full</th>
+</tr>
+
+<tr>
+<td>Headshot</td>
+<td>30k</td>
+<td>50k</td>
+<td>80k</td>
+</tr>
+
+<tr>
+<td>Half-body</td>
+<td>40k</td>
+<td>60k</td>
+<td>90k</td>
+</tr>
+
+<tr>
+<td>Full-body</td>
+<td>50k</td>
+<td>80k</td>
+<td>110k</td>
+</tr>
+
+</table>
 
 </div>
 
@@ -594,14 +544,22 @@ Hiện tại mình không nhận full body
 
 <div class="section">
 
-<div class="tos-title">1. Về khách hàng</div>
+<div class="tos-title">1. Về commission</div>
+<p>Chỉ nhận các đơn phù hợp với style hiện tại.</p>
 
-<p>Gửi đầy đủ brief và note yêu cầu.</p>
-<p>Có thể trì hoãn tiền comm 2 tuần.</p>
-
-<div class="ai-warning">
-TUYỆT ĐỐI KHÔNG FEED CHO A.I
 </div>
+
+<div class="section">
+
+<div class="tos-title">2. Về khách hàng</div>
+<p>Gửi đầy đủ brief và yêu cầu.</p>
+
+</div>
+
+<div class="section">
+
+<div class="tos-title">3. Về artist</div>
+<p>Artist có quyền từ chối nếu đơn quá khả năng.</p>
 
 </div>
 
@@ -609,7 +567,7 @@ TUYỆT ĐỐI KHÔNG FEED CHO A.I
 
 <section id="contact" class="section contact">
 
-<a href="https://www.facebook.com/kemdao.peach/">Liên hệ qua Facebook</a>
+<a href="https://www.facebook.com/">Liên hệ qua Facebook</a>
 
 </section>
 
@@ -619,8 +577,18 @@ Do not repost or use my art without permission.
 
 <script>
 
-const normal=["sample1.jpg","sample2.jpg","sample3.jpg","sample4.jpg"]
-const chibi=["chibi1.jpg","chibi2.jpg","chibi3.jpg"]
+/* GALLERY */
+
+const normal=[
+"sample1.jpg","sample2.jpg","sample3.jpg",
+"sample4.jpg","sample5.jpg","sample6.jpg",
+"sample7.jpg","sample8.jpg","sample9.jpg"
+]
+
+const chibi=[
+"chibi1.jpg","chibi2.jpg","chibi3.jpg",
+"chibi4.jpg","chibi5.jpg","chibi6.jpg"
+]
 
 function showGallery(type,btn){
 
@@ -643,23 +611,23 @@ document.getElementById("gallery-container").innerHTML=html
 
 showGallery("normal",document.querySelector(".filter button"))
 
-/* PETALS */
+/* PETAL */
 
 for(let i=0;i<40;i++){
 
-let p=document.createElement("div")
+let petal=document.createElement("div")
 
-p.className="petal"
+petal.className="petal"
 
-p.style.left=Math.random()*100+"vw"
+petal.style.left=Math.random()*100+"vw"
 
-p.style.animationDuration=(6+Math.random()*8)+"s"
+petal.style.animationDuration=(6+Math.random()*8)+"s"
 
-p.style.opacity=Math.random()
+petal.style.opacity=Math.random()
 
-p.style.transform=`scale(${0.6+Math.random()})`
+petal.style.transform=`scale(${0.6+Math.random()})`
 
-document.body.appendChild(p)
+document.body.appendChild(petal)
 
 }
 
