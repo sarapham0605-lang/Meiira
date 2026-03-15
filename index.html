@@ -59,6 +59,28 @@ margin-right:40px;
 text-decoration:none;
 color:#6a5050;
 font-weight:600;
+position:relative;
+transition:0.25s;
+}
+
+.menu a:hover{
+color:#d85d7b;
+transform:translateY(-3px);
+}
+
+.menu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:#d85d7b;
+transition:0.25s;
+}
+
+.menu a:hover::after{
+width:100%;
 }
 
 .contact-nav{
